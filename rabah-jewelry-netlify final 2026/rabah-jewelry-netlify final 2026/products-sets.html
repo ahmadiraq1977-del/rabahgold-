@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أطقم وقلائد | شركة ومكتب رباح لتجارة الذهب والمجوهرات</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#18130E;--bg-2:#1F1811;--panel:#241C15;--line:#3A2E1F;--gold:#C9A227;--gold-bright:#E8C468;--gold-soft:#8C7534;--ivory:#F2ECDF;--muted:#B4A98B;--oxblood:#7A2530;--radius:2px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ivory);font-family:'Cairo',sans-serif;line-height:1.7}
+html[lang="en"] body,html[lang="tr"] body{font-family:'Inter',sans-serif}
+h1,h2{font-family:'Aref Ruqaa',serif;font-weight:700}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="tr"] h1,html[lang="tr"] h2{font-family:'Inter',sans-serif;font-weight:700}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header.site-nav{position:sticky;top:0;z-index:40;background:rgba(24,19,14,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:1180px;margin:0 auto;gap:12px}
+.brand{display:flex;align-items:center;gap:10px}.logo-mark{width:40px;height:40px;display:block;flex-shrink:0}footer .logo-mark{width:40px;height:40px;margin:0 auto 10px}
+.brand .name{font-family:'Aref Ruqaa',serif;font-size:24px;color:var(--gold-bright)}
+html[lang="en"] .brand .name,html[lang="tr"] .brand .name{font-family:'Inter',sans-serif;font-weight:700}
+.brand .tag{font-size:12px;color:var(--muted)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.back-link{font-size:14px;color:var(--muted)}
+.back-link:hover{color:var(--gold-bright)}
+.lang-switch{display:flex;gap:2px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:2px}
+.lang-switch button{background:0 0;border:0;color:var(--muted);font:600 11px inherit;padding:5px 9px;border-radius:var(--radius);cursor:pointer}
+.lang-switch button.active{background:var(--gold);color:#18130E}
+.nav-cta{background:var(--gold);color:#18130E;font-weight:700;font-size:13px;padding:9px 16px;border-radius:var(--radius)}
+.page-hero{padding:48px 0 36px;border-bottom:1px solid var(--line);background:var(--bg-2)}
+.eyebrow{display:inline-flex;font-size:13px;color:var(--gold-bright);border:1px solid var(--gold-soft);padding:6px 14px;border-radius:20px;margin-bottom:16px}
+.page-hero h1{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+.page-hero p{color:var(--muted);font-size:16px;max-width:60ch}
+.tip{margin-top:22px;padding:14px 16px;background:var(--panel);border:1px solid var(--line);border-radius:4px;font-size:14px;color:var(--muted)}
+.tip b{color:var(--gold-bright)}
+.tip code{direction:ltr;unicode-bidi:embed;background:var(--bg);color:var(--gold-bright);padding:1px 6px;border-radius:2px;font-size:13px}
+.gallery{padding:40px 0 20px}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.photo-card{position:relative;aspect-ratio:auto;border-radius:4px;overflow:hidden;background:var(--panel);border:1px solid var(--line);cursor:zoom-in;transition:border-color .25s,transform .25s;display:flex;flex-direction:column}
+.photo-card:hover{border-color:var(--gold-soft);transform:translateY(-3px)}
+.photo-card .img-wrap{position:relative;aspect-ratio:1;overflow:hidden;background:var(--panel-2)}
+.photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-card.is-out{cursor:default}
+.photo-card.is-out img{filter:grayscale(.4) brightness(.82)}
+.photo-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;background:var(--bg-2);border-top:1px solid var(--line)}
+.stock-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap}
+.stock-badge.in{color:#143214;background:#c8e6c8;border:1px solid #8fbf8f}
+.stock-badge.out{color:#4a1212;background:#e8b4b4;border:1px solid #d09090}
+.photo-num{font-size:11px;color:var(--muted);direction:ltr;unicode-bidi:embed}
+.sku-code{font-size:12.5px;font-weight:800;color:var(--gold-bright);direction:ltr;unicode-bidi:embed;letter-spacing:.5px}
+.photo-meta{flex-wrap:wrap}
+.empty{grid-column:1/-1;text-align:center;padding:56px 20px;border:1px dashed var(--line);border-radius:4px;color:var(--muted)}
+.empty strong{display:block;color:var(--gold-bright);font-size:16px;margin-bottom:8px}
+.lightbox{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.92);align-items:center;justify-content:center;padding:24px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(960px,95vw);max-height:90vh;object-fit:contain;border-radius:4px}
+.lightbox .close{position:absolute;top:16px;inset-inline-end:20px;background:0 0;border:0;color:#fff;font-size:34px;cursor:pointer;line-height:1}
+.cta-band{padding:40px 0 70px}
+.cta-panel{background:linear-gradient(135deg,var(--panel),var(--oxblood) 180%);border:1px solid var(--gold-soft);border-radius:var(--radius);padding:36px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.cta-panel h2{font-size:20px;margin-bottom:6px}
+.cta-panel p{color:var(--muted);font-size:14px}
+.btn-primary{display:inline-flex;padding:12px 22px;font-size:14px;font-weight:700;border-radius:var(--radius);background:var(--gold);color:#18130E}
+footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+footer strong{color:var(--gold-bright);font-family:'Aref Ruqaa',serif;font-size:15px}
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.nav-cta{display:none}.cta-panel{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="gNav" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2DC9A"/>
+      <stop offset=".5" stop-color="#E8C468"/>
+      <stop offset="1" stop-color="#C9A227"/>
+    </linearGradient>
+  </defs>
+  <!-- full circle frame -->
+  <circle cx="32" cy="32" r="27" stroke="url(#gNav)" stroke-width="4.5"/>
+  <!-- inner R monogram -->
+  <path fill="url(#gNav)" d="
+    M18 18h16c7.5 0 13 4.2 13 11.2 0 5.2-3 9-8 10.6L46 46h-7.2L32.5 39H25v7H18V18zm7 7v8.5h9.5c3.4 0 5.8-1.7 5.8-4.3S37.9 25 34.5 25H25z
+  "/>
+</svg>
+      <span class="name" data-i18n="brand_name">رباح</span>
+      <span class="tag" data-i18n="brand_tag">شركة ومكتب لتجارة الذهب والمجوهرات</span>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <button type="button" data-lang="ar" class="active">AR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="tr">TR</button>
+      </div>
+      <a href="index.html" class="back-link" data-i18n="back">→ الرئيسية</a>
+      <a href="https://wa.me/905366184381" target="_blank" rel="noopener" class="nav-cta" data-i18n="wa">راسلنا واتساب</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="eyebrow">منتجاتنا · أطقم وقلائد</span>
+    <h1 data-i18n="title">أطقم وقلائد</h1>
+    <p data-i18n="desc">أطقم مجوهرات متكاملة تناسب المعارض والمناسبات الكبرى وطلبات الجملة.</p>
+    <div class="tip" data-i18n-html="tip"><b>متوفر:</b> <code>images/sets/1.jpg</code> — <b>نفدت:</b> انقل إلى <code>images/sets/out/</code><br><b>رقم المنتج للطلب:</b> يظهر تحت كل صورة مثل <code>S-01</code> — اكتبه في نموذج الطلب أو واتساب.</div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-panel">
+      <div>
+        <h2 data-i18n="cta_title">مهتم بطلب هذه الفئة بالجملة؟</h2>
+        <p data-i18n="cta_desc">راسلنا للحصول على الأسعار الحالية وتفاصيل الشحن.</p>
+      </div>
+      <a href="https://wa.me/905366184381" target="_blank" rel="noopener" class="btn-primary" data-i18n="cta_btn">راسلنا الآن عبر واتساب</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="gFoot" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2DC9A"/>
+      <stop offset=".5" stop-color="#E8C468"/>
+      <stop offset="1" stop-color="#C9A227"/>
+    </linearGradient>
+  </defs>
+  <!-- full circle frame -->
+  <circle cx="32" cy="32" r="27" stroke="url(#gFoot)" stroke-width="4.5"/>
+  <!-- inner R monogram -->
+  <path fill="url(#gFoot)" d="
+    M18 18h16c7.5 0 13 4.2 13 11.2 0 5.2-3 9-8 10.6L46 46h-7.2L32.5 39H25v7H18V18zm7 7v8.5h9.5c3.4 0 5.8-1.7 5.8-4.3S37.9 25 34.5 25H25z
+  "/>
+</svg>
+    <strong data-i18n="footer_brand">شركة ومكتب رباح لتجارة الذهب والمجوهرات</strong>
+    <p data-i18n="footer_copy">© جميع الحقوق محفوظة — شركة ومكتب رباح لتجارة الذهب والمجوهرات</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="close" id="lbClose" type="button">&times;</button>
+  <img id="lbImg" src="" alt="">
+</div>
+
+<script>
+const FOLDER = "images/sets/";
+const PREFIX = "S"; // رمز الفئة للطلب
+
+
+// التوفر: الصور في المجلد الرئيسي = متوفر
+// الصور في مجلد out/ = نفذت الكمية
+// مثال: images/rings/1.jpg متوفر | images/rings/out/1.jpg نفدت
+
+
+
+
+
+const MAX = 60; // يبحث حتى 60 صورة
+const EXTS = ["jpg","jpeg","png","webp","JPG","JPEG","PNG","WEBP"];
+
+const I18N = {
+  ar: {
+    brand_name:"رباح", brand_tag:"شركة ومكتب لتجارة الذهب والمجوهرات", back:"→ الرئيسية", wa:"راسلنا واتساب",
+    eyebrow:"منتجاتنا · أطقم وقلائد", title:"أطقم وقلائد", desc:"أطقم مجوهرات متكاملة تناسب المعارض والمناسبات الكبرى وطلبات الجملة.",
+    tip:'<b>لإضافة الصور:</b> ضع الملفات في <code>images/sets/</code> كـ <code>1.jpg</code>, <code>2.jpg</code>…<br><b>التوفر:</b> في <code>STOCK</code> اكتب مثلاً <code>2: "out"</code> لنفاذ الصورة رقم 2.',
+    empty_title:"لا توجد صور بعد",
+    empty_desc:"ضع الصور في images/sets/ للمتوفر، أو في images/sets/out/ للنافد",
+    stock_in:"متوفر",
+    stock_out:"نفذت الكمية",
+    stock_tip:"لتمييز النفاد: داخل STOCK اكتب رقم الصورة: \"out\"",
+    cta_title:"مهتم بطلب هذه الفئة بالجملة؟", cta_desc:"راسلنا للحصول على الأسعار الحالية وتفاصيل الشحن.",
+    cta_btn:"راسلنا الآن عبر واتساب", footer_brand:"شركة ومكتب رباح لتجارة الذهب والمجوهرات",
+    footer_copy:"© جميع الحقوق محفوظة — شركة ومكتب رباح لتجارة الذهب والمجوهرات"
+  },
+  en: {
+    brand_name:"Rabah", brand_tag:"Gold & Jewelry Trading Co.", back:"← Home", wa:"WhatsApp Us",
+    eyebrow:"Products · Sets & Necklaces", title:"Sets & Necklaces", desc:"Complete jewelry sets suited for exhibitions, major occasions and wholesale orders.",
+    tip:'<b>Photos:</b> put files in <code>images/sets/</code> as <code>1.jpg</code>, <code>2.jpg</code>…<br><b>Stock:</b> in <code>STOCK</code> set e.g. <code>2: "out"</code> for image 2 sold out.',
+    empty_title:"No photos yet",
+    empty_desc:"Put images in images/sets/ (available) or images/sets/out/ (sold out)",
+    stock_in:"Available",
+    stock_out:"Out of stock",
+    stock_tip:"To mark sold out: in STOCK set the image number to \"out\"",
+    cta_title:"Interested in this category wholesale?", cta_desc:"Message us for current prices and shipping details.",
+    cta_btn:"Message us on WhatsApp", footer_brand:"Rabah Co. & Office for Gold & Jewelry Trading",
+    footer_copy:"© All rights reserved — Rabah Co. & Office for Gold & Jewelry Trading"
+  },
+  tr: {
+    brand_name:"Rabah", brand_tag:"Altın ve Mücevher Ticareti", back:"← Ana sayfa", wa:"WhatsApp",
+    eyebrow:"Ürünler · Takımlar ve Kolyeler", title:"Takımlar ve Kolyeler", desc:"Fuarlar, büyük etkinlikler ve toptan siparişler için eksiksiz mücevher takımları.",
+    tip:'<b>Fotoğraf:</b> <code>images/sets/</code> içine <code>1.jpg</code>, <code>2.jpg</code>…<br><b>Stok:</b> <code>STOCK</code> içinde örn. <code>2: "out"</code> yazın.',
+    empty_title:"Henüz fotoğraf yok",
+    empty_desc:"Stoktakiler: images/sets/ — tükenenler: images/sets/out/",
+    stock_in:"Stokta",
+    stock_out:"Tükendi",
+    stock_tip:"Tükenenler için STOCK içinde numara: \"out\"",
+    cta_title:"Bu kategoride toptan sipariş ister misiniz?", cta_desc:"Güncel fiyat ve sevkiyat detayları için bize yazın.",
+    cta_btn:"WhatsApp ile yazın", footer_brand:"Rabah Altın ve Mücevher Ticaret Şirketi",
+    footer_copy:"© Tüm hakları saklıdır — Rabah Altın ve Mücevher Ticaret Şirketi"
+  }
+};
+
+function setLang(lang){
+  const d = I18N[lang] || I18N.ar;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const k = el.getAttribute("data-i18n");
+    if(d[k] != null) el.textContent = d[k];
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => {
+    const k = el.getAttribute("data-i18n-html");
+    if(d[k] != null) el.innerHTML = d[k];
+  });
+  document.title = d.title + " | " + d.footer_brand;
+  document.querySelectorAll(".lang-switch button").forEach(b => {
+    b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+  });
+  try{ localStorage.setItem("rabah_lang", lang); }catch(e){}
+}
+document.querySelectorAll(".lang-switch button").forEach(b => {
+  b.addEventListener("click", () => setLang(b.getAttribute("data-lang")));
+});
+
+function t(key){
+  const lang = document.documentElement.lang || "ar";
+  return (I18N[lang] || I18N.ar)[key] || key;
+}
+
+// تحميل تلقائي: يجرّب 1.jpg ثم 1.png ثم 2.jpg ... دون أي تعديل منك
+function probe(url){
+  return new Promise(resolve => {
+    const img = new Image();
+    img.onload = () => resolve(url);
+    img.onerror = () => resolve(null);
+    img.src = url;
+  });
+}
+
+async function loadGallery(){
+  const grid = document.getElementById("galleryGrid");
+  grid.innerHTML = "";
+  const found = []; // {src, num, out}
+
+  async function collectFrom(base, isOut){
+    const list = [];
+    for(let n = 1; n <= MAX; n++){
+      let hit = null;
+      for(const ext of EXTS){
+        hit = await probe(base + n + "." + ext);
+        if(hit) break;
+      }
+      if(hit) list.push({src: hit, num: n, out: isOut});
+      else if(n > 3 && list.length === 0) break;
+      else if(n > list.length + 2 && list.length > 0) break;
+    }
+    return list;
+  }
+
+  const available = await collectFrom(FOLDER, false);
+  const sold = await collectFrom(FOLDER + "out/", true);
+  // عرض المتوفر أولاً ثم النافد
+  found.push(...available, ...sold);
+
+  if(found.length === 0){
+    grid.innerHTML = '<div class="empty"><strong>'+t("empty_title")+'</strong><span>'+t("empty_desc")+'</span></div>';
+    return;
+  }
+
+  found.forEach(item => {
+    const isOut = !!item.out;
+    const card = document.createElement("div");
+    card.className = "photo-card" + (isOut ? " is-out" : "");
+    const wrap = document.createElement("div");
+    wrap.className = "img-wrap";
+    const img = document.createElement("img");
+    img.src = item.src;
+    img.alt = t("title");
+    img.loading = "lazy";
+    if(!isOut){
+      img.onclick = () => {
+        document.getElementById("lbImg").src = item.src;
+        document.getElementById("lightbox").classList.add("open");
+      };
+    } else {
+      img.onclick = () => {
+        document.getElementById("lbImg").src = item.src;
+        document.getElementById("lightbox").classList.add("open");
+      };
+    }
+    wrap.appendChild(img);
+    const meta = document.createElement("div");
+    meta.className = "photo-meta";
+    const badge = document.createElement("span");
+    badge.className = "stock-badge " + (isOut ? "out" : "in");
+    badge.textContent = isOut ? t("stock_out") : t("stock_in");
+    const sku = document.createElement("span");
+    sku.className = "sku-code";
+    const pad = String(item.num).padStart(2, "0");
+    sku.textContent = (typeof PREFIX !== "undefined" ? PREFIX : "P") + "-" + pad;
+    sku.title = "Product code";
+    meta.appendChild(badge);
+    meta.appendChild(sku);
+    card.appendChild(wrap);
+    card.appendChild(meta);
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById("lbClose").onclick = () => document.getElementById("lightbox").classList.remove("open");
+document.getElementById("lightbox").onclick = e => {
+  if(e.target.id === "lightbox") e.currentTarget.classList.remove("open");
+};
+document.addEventListener("keydown", e => {
+  if(e.key === "Escape") document.getElementById("lightbox").classList.remove("open");
+});
+
+let saved = "ar";
+try{ saved = localStorage.getItem("rabah_lang") || "ar"; }catch(e){}
+setLang(saved);
+loadGallery();
+</script>
+</body>
+</html>
