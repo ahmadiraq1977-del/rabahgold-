@@ -1,0 +1,18 @@
+الصور والتوفر — انقل الملف فقط
+==============================
+
+متوفر:
+  images/rings/1.jpg
+  images/rings/2.jpg
+
+نفذت الكمية:
+  انقل الصورة إلى:
+  images/rings/out/1.jpg
+
+نفس الفكرة:
+  images/bracelets/ و images/bracelets/out/
+  images/sets/ و images/sets/out/
+  images/bullion/ و images/bullion/out/
+
+بعد النقل ارفع المجلد وأعد تحميل الصفحة.
+لا حاجة لتعديل أي ملف HTML.

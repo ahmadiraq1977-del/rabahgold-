@@ -1,0 +1,2745 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">شركة ومكتب رباح لتجارة الذهب والمجوهرات | جملة ومفرد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#18130E;
+    --bg-2:#1F1811;
+    --panel:#241C15;
+    --panel-2:#2C2217;
+    --line:#3A2E1F;
+    --gold:#C9A227;
+    --gold-bright:#E8C468;
+    --gold-soft:#8C7534;
+    --ivory:#F2ECDF;
+    --muted:#B4A98B;
+    --oxblood:#7A2530;
+    --oxblood-bright:#9C3240;
+    --radius:2px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--ivory);
+    font-family:'Cairo', 'Inter', sans-serif;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+
+  html[lang="en"] body,
+  html[lang="tr"] body{
+    font-family:'Inter', 'Cairo', sans-serif;
+  }
+
+  h1,h2,h3, .display{
+    font-family:'Aref Ruqaa', serif;
+    font-weight:700;
+    color:var(--ivory);
+  }
+  html[lang="en"] h1,
+  html[lang="en"] h2,
+  html[lang="en"] h3,
+  html[lang="tr"] h1,
+  html[lang="tr"] h2,
+  html[lang="tr"] h3{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    letter-spacing:-0.02em;
+  }
+
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  img,svg{display:block; max-width:100%;}
+
+  .wrap{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 16px;
+    width:100%;
+    box-sizing:border-box;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .8s ease, transform .8s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  /* ---------- header ---------- */
+  header.site-nav{
+    position:fixed;
+    top:0; right:0; left:0;
+    z-index:50;
+    background:rgba(24,19,14,.95);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    width:100%;
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 16px;
+    max-width:1280px;
+    margin:0 auto;
+    gap:10px;
+    width:100%;
+    box-sizing:border-box;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex:0 1 auto;
+    min-width:0;
+    max-width:min(280px, 34vw);
+  }
+  .logo-mark{
+    width:40px;
+    height:40px;
+    display:block;
+    flex-shrink:0;
+  }
+  footer .logo-mark{
+    width:44px;
+    height:44px;
+    margin:0 auto 10px;
+  }
+  .brand .brand-text{
+    display:flex;
+    flex-direction:column;
+    gap:1px;
+    min-width:0;
+    overflow:hidden;
+  }
+  .brand .name{
+    font-family:'Aref Ruqaa', serif;
+    font-size:20px;
+    color:var(--gold-bright);
+    line-height:1.15;
+    white-space:nowrap;
+  }
+  html[lang="en"] .brand .name,
+  html[lang="tr"] .brand .name{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+  }
+  .brand .tag{
+    font-size:10px;
+    color:var(--muted);
+    letter-spacing:0;
+    line-height:1.25;
+    white-space:normal;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .nav-links{
+    display:flex;
+    flex-wrap:nowrap;
+    gap:12px;
+    font-size:13px;
+    flex:1 1 auto;
+    justify-content:center;
+    min-width:0;
+    overflow:hidden;
+  }
+  .nav-links a{
+    color:var(--ivory);
+    position:relative;
+    padding:4px 0;
+    transition:color .25s ease;
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+  .nav-links a:hover{color:var(--gold-bright);}
+  .nav-links a::after{
+    content:"";
+    position:absolute;
+    right:0; left:0; bottom:-2px;
+    height:1px;
+    background:var(--gold);
+    transform:scaleX(0);
+    transform-origin:right;
+    transition:transform .3s ease;
+  }
+  html[dir="ltr"] .nav-links a::after{transform-origin:left;}
+  .nav-links a:hover::after{transform:scaleX(1);}
+  /* أخفِ الروابط الثانوية على الشاشات المتوسطة لتفادي القص */
+  .nav-links a.nav-sec{display:none;}
+
+  .nav-right{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-shrink:0;
+  }
+
+  .lang-switch{
+    display:flex;
+    align-items:center;
+    gap:2px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:3px;
+  }
+  .lang-switch button{
+    background:transparent;
+    border:none;
+    color:var(--muted);
+    font-family:inherit;
+    font-size:12px;
+    font-weight:600;
+    padding:6px 10px;
+    border-radius:var(--radius);
+    cursor:pointer;
+    transition:all .2s ease;
+  }
+  .lang-switch button:hover{color:var(--ivory);}
+  .lang-switch button.active{
+    background:var(--gold);
+    color:#18130E;
+  }
+
+  .alert-toggle span{display:inline;}
+  .nav-cta{padding:8px 12px; font-size:12px; white-space:nowrap;}
+  @media (max-width:1200px){
+    .alert-toggle span{display:none;}
+    .alert-toggle{padding:8px;}
+    .nav-links{gap:10px; font-size:12.5px;}
+    .brand{max-width:min(240px, 30vw);}
+  }
+  @media (min-width:1101px){
+    .nav-links a.nav-sec{display:inline;}
+  }
+
+  .alert-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:6px 10px;
+    font-size:12px;
+    font-weight:600;
+    color:var(--muted);
+    cursor:pointer;
+    font-family:inherit;
+    transition:color .2s, border-color .2s, background .2s;
+    white-space:nowrap;
+  }
+  .alert-toggle:hover{color:var(--ivory); border-color:var(--gold-soft);}
+  .alert-toggle.on{
+    color:var(--gold-bright);
+    border-color:var(--gold-soft);
+  }
+  .alert-toggle .bell{
+    width:14px; height:14px; flex-shrink:0;
+  }
+  .alert-toggle.off{opacity:.7;}
+
+  .alert-toggle.major.on{border-color:#E8A0A8; color:#E8A0A8;}
+  .oz-modal-backdrop{
+    display:none; position:fixed; inset:0; z-index:300;
+    background:rgba(0,0,0,.55); align-items:center; justify-content:center;
+    padding:20px;
+  }
+  .oz-modal-backdrop.open{display:flex;}
+  .oz-modal{
+    background:var(--panel); border:1px solid var(--gold);
+    border-radius:6px; padding:28px 26px 22px; max-width:380px; width:100%;
+    text-align:center; box-shadow:0 16px 40px rgba(0,0,0,.5);
+    animation:ozPop .28s ease;
+  }
+  @keyframes ozPop{
+    from{transform:scale(.92); opacity:0}
+    to{transform:scale(1); opacity:1}
+  }
+  .oz-modal .oz-icon{font-size:32px; margin-bottom:10px;}
+  .oz-modal h3{
+    font-family:'Aref Ruqaa',serif; font-size:22px; color:var(--gold-bright);
+    margin-bottom:10px;
+  }
+  html[lang="en"] .oz-modal h3, html[lang="tr"] .oz-modal h3{font-family:'Inter',sans-serif; font-weight:700;}
+  .oz-modal p{color:var(--muted); font-size:14.5px; margin-bottom:8px; line-height:1.6;}
+  .oz-modal .oz-price{
+    font-size:20px; font-weight:700; color:var(--ivory); direction:ltr;
+    margin:12px 0 18px;
+  }
+  .oz-modal .oz-price.up{color:#E8C468;}
+  .oz-modal .oz-price.down{color:#E8A0A8;}
+  .oz-modal .oz-actions{display:flex; gap:10px; justify-content:center; flex-wrap:wrap;}
+  .oz-modal button{
+    font:inherit; font-size:14px; font-weight:700; padding:10px 18px;
+    border-radius:var(--radius); cursor:pointer; border:1px solid var(--line);
+    background:var(--bg); color:var(--ivory);
+  }
+  .oz-modal button.primary{background:var(--gold); color:#18130E; border-color:var(--gold);}
+  .oz-modal button.primary:hover{background:var(--gold-bright);}
+
+
+
+  .nav-cta{
+    display:inline-block;
+    background:var(--gold);
+    color:#18130E;
+    font-weight:700;
+    font-size:14px;
+    padding:10px 18px;
+    border-radius:var(--radius);
+    transition:background .25s ease, transform .25s ease;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--gold-bright); transform:translateY(-1px);}
+
+  .nav-toggle{display:none; background:none; border:none; color:var(--ivory); font-size:26px; cursor:pointer;}
+
+  /* ---------- ticker ---------- */
+  .ticker-bar{
+    position:fixed;
+    top:64px;
+    right:0; left:0;
+    z-index:49;
+    background:var(--oxblood);
+    border-bottom:1px solid #4a171e;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  .ticker-track{
+    display:inline-flex;
+    align-items:center;
+    animation:ticker-scroll 30s linear infinite;
+    padding:13px 0;
+  }
+  html[dir="ltr"] .ticker-track{
+    animation-name:ticker-scroll-ltr;
+  }
+  .ticker-track span.item{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:0 30px;
+    font-size:15px;
+    font-weight:700;
+    color:#F4E4C1;
+    border-left:1px solid rgba(244,228,193,.25);
+  }
+  html[dir="ltr"] .ticker-track span.item{
+    border-left:none;
+    border-right:1px solid rgba(244,228,193,.25);
+  }
+  .ticker-track .live-dot{
+    width:9px; height:9px; border-radius:50%;
+    background:#E7B84B;
+    box-shadow:0 0 0 0 rgba(231,184,75,.7);
+    animation:pulse-dot 1.6s ease-out infinite;
+  }
+  @keyframes pulse-dot{
+    0%{box-shadow:0 0 0 0 rgba(231,184,75,.6);}
+    70%{box-shadow:0 0 0 9px rgba(231,184,75,0);}
+    100%{box-shadow:0 0 0 0 rgba(231,184,75,0);}
+  }
+  @keyframes ticker-scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+  @keyframes ticker-scroll-ltr{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+
+  .promo-bar{
+    position:fixed;
+    top:calc(65px + 44px);
+    right:0; left:0;
+    z-index:48;
+    background:linear-gradient(90deg, #1a150f 0%, #2c2217 40%, #3a2a12 100%);
+    border-bottom:1px solid var(--gold-soft);
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  .promo-track{
+    display:inline-flex;
+    align-items:center;
+    animation:promo-scroll 40s linear infinite;
+    padding:10px 0;
+  }
+  html[dir="ltr"] .promo-track{animation-name:promo-scroll-ltr;}
+  .promo-track .promo-item{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:0 36px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--gold-bright);
+  }
+  .promo-track .promo-item .sep{
+    color:var(--gold-soft);
+    opacity:.8;
+  }
+  .promo-track .promo-phone{
+    direction:ltr;
+    unicode-bidi:embed;
+    color:var(--ivory);
+    font-weight:700;
+  }
+  @keyframes promo-scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+  @keyframes promo-scroll-ltr{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+  main{padding-top:128px;}
+
+
+  .hero-bg-art{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+    overflow:hidden;
+  }
+  .hero-bg-art svg{
+    position:absolute;
+    width:min(980px, 96vw);
+    height:auto;
+    opacity:.32;
+    top:50%;
+    transform:translateY(-48%);
+  }
+  html[dir="rtl"] .hero-bg-art svg{
+    left:-8%;
+  }
+  html[dir="ltr"] .hero-bg-art svg{
+    right:-8%;
+  }
+  .hero .wrap{
+    position:relative;
+    z-index:1;
+  }
+  @media (max-width:920px){
+    .hero-bg-art svg{
+      opacity:.22;
+      width:min(700px, 115vw);
+      top:58%;
+    }
+  }
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding:80px 0 100px;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:-20% -10% auto auto;
+    width:640px; height:640px;
+    background:radial-gradient(circle, rgba(201,162,39,.10), transparent 70%);
+    pointer-events:none;
+  }
+  html[dir="ltr"] .hero::before{
+    inset:-20% auto auto -10%;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:56px;
+    align-items:center;
+    position:relative;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    letter-spacing:.5px;
+    color:var(--gold-bright);
+    border:1px solid var(--gold-soft);
+    padding:6px 14px;
+    border-radius:20px;
+    margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:clamp(34px, 4.6vw, 56px);
+    line-height:1.28;
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--gold-bright);
+  }
+  .hero p.lead{
+    font-size:17px;
+    color:var(--muted);
+    max-width:52ch;
+    margin-bottom:34px;
+  }
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:14px 26px;
+    font-size:15px;
+    font-weight:700;
+    border-radius:var(--radius);
+    transition:transform .25s ease, background .25s ease, border-color .25s ease;
+    cursor:pointer;
+  }
+  .btn-primary{background:var(--gold); color:#18130E;}
+  .btn-primary:hover{background:var(--gold-bright); transform:translateY(-2px);}
+  .btn-ghost{border:1px solid var(--line); color:var(--ivory);}
+  .btn-ghost:hover{border-color:var(--gold); color:var(--gold-bright);}
+
+  .hero-panel{
+    background:linear-gradient(180deg, var(--panel), var(--panel-2));
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:34px 28px;
+    position:relative;
+  }
+  .hero-panel .scale-icon{margin:0 auto 18px; width:120px;}
+  .hero-panel .scale-icon svg{width:100%; height:auto;}
+  .hero-panel h3{
+    text-align:center;
+    font-size:20px;
+    color:var(--gold-bright);
+    margin-bottom:6px;
+  }
+  .hero-panel .sub{
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:26px;
+  }
+  .stat-list{border-top:1px solid var(--line);}
+  .stat-row{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 2px;
+    border-bottom:1px solid var(--line);
+    font-size:14.5px;
+    gap:12px;
+  }
+  .stat-row span:first-child{color:var(--muted);}
+  .stat-row span:last-child{color:var(--gold-bright); font-weight:700; text-align:end;}
+
+  section{padding:96px 0;}
+  .section-head{
+    max-width:640px;
+    margin-bottom:52px;
+  }
+  .section-head .eyebrow{margin-bottom:16px;}
+  .section-head h2{font-size:clamp(28px,3.2vw,38px); margin-bottom:14px;}
+  .section-head p{color:var(--muted); font-size:16px;}
+
+  .about{border-bottom:1px solid var(--line); background:var(--bg-2);}
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:start;
+  }
+  .about-grid p{color:var(--muted); font-size:16px; margin-bottom:18px;}
+  .ledger{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:8px 0;
+  }
+  .ledger-item{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:18px 24px;
+    border-bottom:1px solid var(--line);
+  }
+  .ledger-item:last-child{border-bottom:none;}
+  .ledger-item .mark{
+    width:34px; height:34px;
+    flex:0 0 34px;
+    border:1px solid var(--gold-soft);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--gold-bright);
+    font-family:'Aref Ruqaa', serif;
+    font-size:16px;
+  }
+  html[lang="en"] .ledger-item .mark,
+  html[lang="tr"] .ledger-item .mark{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:14px;
+  }
+  .ledger-item .txt strong{display:block; font-size:15px; margin-bottom:2px;}
+  .ledger-item .txt span{color:var(--muted); font-size:13.5px;}
+
+  .products-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:22px;
+  }
+  .product-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .product-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--gold-soft);
+    background:var(--panel-2);
+  }
+  .product-cover{
+    position:relative;
+    aspect-ratio:4/3;
+    background:var(--panel-2);
+    overflow:hidden;
+  }
+  .product-cover img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+  }
+  .product-card:hover .product-cover img{transform:scale(1.05);}
+  .product-cover .cover-fallback{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--gold-bright);
+  }
+  .product-cover .cover-fallback svg{width:56px; height:56px; opacity:.7;}
+  .product-body{padding:20px 22px 24px; display:flex; flex-direction:column; flex:1;}
+  .product-card h3{font-size:19px; margin-bottom:8px;}
+  .product-card p{color:var(--muted); font-size:14.5px; flex:1;}
+  .card-link{
+    display:inline-flex; align-items:center; gap:4px;
+    margin-top:14px; font-size:13.5px; font-weight:700;
+    color:var(--gold-bright); border-bottom:1px solid transparent;
+    transition:border-color .2s ease;
+  }
+  .card-link:hover{border-color:var(--gold-bright);}
+
+
+  /* videos */
+  .videos{border-top:1px solid var(--line);}
+  .videos-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+  }
+  .video-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .video-frame{
+    position:relative;
+    aspect-ratio:16/9;
+    background:#0d0b09;
+  }
+  .video-frame video,
+  .video-frame iframe{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    border:0; display:block;
+    object-fit:contain;
+    background:#000;
+  }
+  .video-card .v-label{
+    padding:12px 14px; font-size:13.5px; color:var(--muted);
+    border-top:1px solid var(--line);
+  }
+  .videos .tip{
+    margin:0 0 28px; padding:14px 16px; background:var(--panel);
+    border:1px solid var(--line); border-radius:4px; font-size:14px; color:var(--muted);
+  }
+  .videos .tip b{color:var(--gold-bright);}
+  .videos .tip code{
+    direction:ltr; unicode-bidi:embed; background:var(--bg); color:var(--gold-bright);
+    padding:1px 6px; border-radius:2px; font-size:12.5px;
+  }
+  .videos-empty{
+    grid-column:1/-1; text-align:center; padding:48px 20px;
+    border:1px dashed var(--line); border-radius:4px; color:var(--muted);
+  }
+  .videos-empty strong{display:block; color:var(--gold-bright); margin-bottom:8px;}
+  @media (max-width:920px){ .videos-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:600px){ .videos-grid{grid-template-columns:1fr;} }
+
+
+  /* karat converter */
+  .converter{border-top:1px solid var(--line); background:var(--bg-2);}
+  .converter-panel{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px; max-width:720px; margin:0 auto;
+  }
+  .converter-panel h2{margin-bottom:8px;}
+  .converter-panel .lead{color:var(--muted); font-size:14.5px; margin-bottom:22px;}
+  .conv-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .conv-grid .field label{display:block; font-size:13px; color:var(--muted); margin-bottom:6px;}
+  .conv-grid input, .conv-grid select{
+    width:100%; background:var(--bg); border:1px solid var(--line); color:var(--ivory);
+    font:inherit; font-size:15px; padding:11px 14px; border-radius:var(--radius);
+  }
+  .conv-results{
+    margin-top:18px; padding:16px; background:var(--bg); border:1px solid var(--line);
+    border-radius:var(--radius); display:grid; gap:10px;
+  }
+  .conv-results .row{display:flex; justify-content:space-between; gap:12px; font-size:14.5px;}
+  .conv-results .row strong{color:var(--gold-bright);}
+  .conv-results .main-result{font-size:18px; padding-top:6px; border-top:1px solid var(--line);}
+
+  /* reviews */
+  .reviews{border-top:1px solid var(--line);}
+  .reviews-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:28px;}
+  .review-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px;
+  }
+  .review-card .stars{color:var(--gold-bright); letter-spacing:2px; margin-bottom:10px; font-size:15px;}
+  .review-card p{color:var(--muted); font-size:14.5px; margin-bottom:14px; line-height:1.7;}
+  .review-card .who{font-size:13px; font-weight:700; color:var(--ivory);}
+  .review-card .who span{display:block; font-weight:400; color:var(--muted); font-size:12px; margin-top:2px;}
+  .review-form-wrap{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:24px; max-width:560px;
+  }
+  .review-form-wrap .field{margin-bottom:14px;}
+  .review-form-wrap label{display:block; font-size:13px; color:var(--muted); margin-bottom:6px;}
+  .review-form-wrap input, .review-form-wrap select, .review-form-wrap textarea{
+    width:100%; background:var(--bg); border:1px solid var(--line); color:var(--ivory);
+    font:inherit; font-size:14.5px; padding:11px 14px; border-radius:var(--radius);
+  }
+  .review-form-wrap textarea{min-height:80px; resize:vertical;}
+  .star-pick{display:flex; gap:6px; direction:ltr;}
+  .star-pick button{
+    background:transparent; border:1px solid var(--line); color:var(--muted);
+    width:36px; height:36px; border-radius:4px; cursor:pointer; font-size:16px;
+  }
+  .star-pick button.on{color:var(--gold-bright); border-color:var(--gold-soft);}
+
+  /* retail badge on products */
+  .mode-pills{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;}
+  .mode-pills button{
+    background:var(--panel); border:1px solid var(--line); color:var(--muted);
+    padding:8px 16px; border-radius:20px; font:600 13px inherit; cursor:pointer;
+  }
+  .mode-pills button.active{background:var(--gold); color:#18130E; border-color:var(--gold);}
+  .product-body .retail-link{
+    display:inline-flex; margin-top:8px; font-size:13px; color:var(--muted);
+    border-bottom:1px dashed var(--line);
+  }
+  .product-body .retail-link:hover{color:var(--gold-bright);}
+
+  @media (max-width:920px){
+    .reviews-grid{grid-template-columns:1fr;}
+    .conv-grid{grid-template-columns:1fr;}
+  }
+
+  /* floating WhatsApp */
+  .wa-float{
+    position:fixed; bottom:24px; inset-inline-end:24px; z-index:90;
+    width:58px; height:58px; border-radius:50%;
+    background:#25D366; color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.35);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .wa-float:hover{transform:scale(1.08); box-shadow:0 8px 28px rgba(37,211,102,.4);}
+  .wa-float svg{width:30px; height:30px;}
+
+  /* order form */
+  .order{border-top:1px solid var(--line); background:var(--bg-2);}
+  .order-grid{
+    display:grid; grid-template-columns:1fr 1.1fr; gap:40px; align-items:start;
+  }
+  .order-form{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px;
+  }
+  .order-form label{
+    display:block; font-size:13px; color:var(--muted); margin-bottom:6px;
+  }
+  .order-form .field{margin-bottom:16px;}
+  .order-form input, .order-form select, .order-form textarea{
+    width:100%; background:var(--bg); border:1px solid var(--line);
+    color:var(--ivory); font:inherit; font-size:14.5px;
+    padding:11px 14px; border-radius:var(--radius); outline:none;
+    transition:border-color .2s;
+  }
+  .order-form input:focus, .order-form select:focus, .order-form textarea:focus{
+    border-color:var(--gold-soft);
+  }
+  .order-form textarea{min-height:90px; resize:vertical;}
+  .order-form .row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .order-form .btn{width:100%; justify-content:center; border:none; cursor:pointer;}
+
+  .order-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+  .order-actions .btn{flex:1;min-width:140px;justify-content:center;border:none;cursor:pointer;text-align:center}
+  .btn-secondary{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px 22px;font-size:14px;font-weight:700;border-radius:var(--radius);
+    background:transparent;color:var(--gold-bright);border:1px solid var(--gold-soft)!important;
+  }
+  .btn-secondary:hover{background:rgba(201,162,39,.12)}
+  #invoicePrintArea{display:none}
+  @media print{
+    body *{visibility:hidden!important}
+    #invoicePrintArea, #invoicePrintArea *{visibility:visible!important}
+    #invoicePrintArea{
+      display:block!important;position:absolute;left:0;top:0;width:100%;
+      background:#fff;color:#111;padding:24px;font-family:Arial,sans-serif
+    }
+  }
+
+  .order-note{font-size:12.5px; color:var(--muted); margin-top:12px;}
+
+  @media (max-width:920px){
+    .order-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){
+    .order-form .row{grid-template-columns:1fr;}
+    .wa-float{bottom:18px; inset-inline-end:18px; width:54px; height:54px;}
+  }
+
+  .why{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--bg-2);}
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .why-item{
+    background:var(--bg-2);
+    padding:36px 34px;
+    display:flex;
+    gap:20px;
+  }
+  .why-item .icon{width:38px; height:38px; flex:0 0 38px; color:var(--gold-bright);}
+  .why-item h3{font-size:18px; margin-bottom:8px;}
+  .why-item p{color:var(--muted); font-size:14.5px;}
+
+  .contact-panel{
+    background:linear-gradient(135deg, var(--panel), var(--oxblood) 180%);
+    border:1px solid var(--gold-soft);
+    border-radius:var(--radius);
+    padding:56px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:40px;
+    align-items:center;
+  }
+  .contact-panel h2{font-size:clamp(26px,3vw,34px); margin-bottom:14px;}
+  .contact-panel p{color:var(--ivory); opacity:.85; margin-bottom:26px; max-width:48ch;}
+  .contact-list{display:flex; flex-direction:column; gap:14px;}
+  .contact-list li{
+    display:flex; align-items:center; gap:12px;
+    font-size:15px;
+    padding-bottom:14px;
+    border-bottom:1px solid rgba(242,236,223,.15);
+  }
+  .contact-list li:last-child{border-bottom:none; padding-bottom:0;}
+  .contact-list .icon{width:20px; height:20px; flex:0 0 20px; color:var(--gold-bright);}
+  .contact-list .val{color:var(--gold-bright); direction:ltr; unicode-bidi:embed;}
+  .contact-note{font-size:12.5px; color:var(--muted); margin-top:14px;}
+  .contact-note .src-link{color:var(--gold-bright); text-decoration:underline; text-underline-offset:2px;}
+
+  footer{padding:34px 0; text-align:center; color:var(--muted); font-size:13.5px;}
+  footer .footer-logo{
+    width:44px; height:44px; margin:0 auto 10px; object-fit:contain; display:block;
+  }
+  footer strong{color:var(--gold-bright); font-family:'Aref Ruqaa', serif; font-size:16px; display:block;}
+  html[lang="en"] footer strong,
+  html[lang="tr"] footer strong{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+  }
+
+  @media (max-width:920px){
+    .hero-grid, .about-grid, .contact-panel{grid-template-columns:1fr;}
+    .products-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:1100px){
+    .nav-links{display:none;}
+    .brand{max-width:min(320px, 55vw);}
+    .brand .tag{-webkit-line-clamp:2; font-size:10px;}
+    .nav-inner{padding:10px 14px;}
+    .nav-toggle{display:block;}
+    body.menu-open .nav-links{
+      display:flex;
+      flex-direction:column;
+      position:absolute;
+      top:64px; right:0; left:0;
+      background:var(--bg);
+      border-bottom:1px solid var(--line);
+      padding:20px 28px;
+      gap:18px;
+    }
+    .nav-right .nav-cta{display:none;}
+    body.menu-open .nav-right .nav-cta{
+      display:inline-block;
+    }
+    body.menu-open .nav-right{
+      position:absolute;
+      top:auto;
+      margin-top:200px;
+      width:100%;
+      left:0;
+      right:0;
+      padding:0 28px 20px;
+      justify-content:flex-start;
+      background:var(--bg);
+      border-bottom:1px solid var(--line);
+    }
+    .ticker-bar{top:60px;}
+    .promo-bar{top:calc(60px + 42px);}
+    main{padding-top:112px;}
+    .products-grid{grid-template-columns:1fr;}
+    .contact-panel{padding:34px 24px;}
+    .lang-switch button{padding:5px 8px; font-size:11px;}
+  }
+
+  body.menu-open .nav-links{
+    display:flex !important;
+    flex-direction:column;
+    position:fixed;
+    top:62px; right:0; left:0;
+    background:rgba(24,19,14,.98);
+    padding:16px 20px 24px;
+    gap:14px;
+    border-bottom:1px solid var(--line);
+    z-index:45;
+    overflow:auto;
+    max-height:calc(100vh - 62px);
+  }
+  body.menu-open .nav-links a.nav-sec{display:block !important;}
+  body.menu-open .nav-links a{font-size:15px; padding:8px 0;}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="gNav" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2DC9A"/>
+      <stop offset=".5" stop-color="#E8C468"/>
+      <stop offset="1" stop-color="#C9A227"/>
+    </linearGradient>
+  </defs>
+  <!-- full circle frame -->
+  <circle cx="32" cy="32" r="27" stroke="url(#gNav)" stroke-width="4.5"/>
+  <!-- inner R monogram -->
+  <path fill="url(#gNav)" d="
+    M18 18h16c7.5 0 13 4.2 13 11.2 0 5.2-3 9-8 10.6L46 46h-7.2L32.5 39H25v7H18V18zm7 7v8.5h9.5c3.4 0 5.8-1.7 5.8-4.3S37.9 25 34.5 25H25z
+  "/>
+</svg>
+      <div class="brand-text">
+        <span class="name" data-i18n="brand_name">رباح</span>
+        <span class="tag" data-i18n="brand_tag">شركة ومكتب لتجارة الذهب والمجوهرات</span>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#about" data-i18n="nav_about">من نحن</a>
+      <a href="#products" data-i18n="nav_products">منتجاتنا</a>
+      <a href="#shop" data-i18n="shop_nav">تسوق</a>
+      <a href="#order" data-i18n="order_eyebrow">طلب</a>
+      <a href="#contact" data-i18n="nav_contact">تواصل</a>
+      <a class="nav-sec" href="#videos" data-i18n="videos_eyebrow">فيديوهات</a>
+      <a class="nav-sec" href="#converter" data-i18n="conv_nav">المحوّل</a>
+      <a class="nav-sec" href="#reviews" data-i18n="reviews_nav">تقييمات</a>
+      <a class="nav-sec" href="#why" data-i18n="nav_why">لماذا رباح</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="ar" class="active">AR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="tr">TR</button>
+      </div>
+      <button type="button" class="alert-toggle on" id="alertToggle" title="Price alerts">
+        <svg class="bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 17h5l-1.4-1.4A2 2 0 0118 14.2V11a6 6 0 00-5-5.9V4a1 1 0 10-2 0v1.1A6 6 0 006 11v3.2c0 .5-.2 1-.6 1.4L4 17h5m6 0a3 3 0 11-6 0"/></svg>
+        <span data-i18n="alert_on">تنبيه السعر</span>
+      </button>
+      <button type="button" class="alert-toggle major on" id="majorAlertToggle" title="Major price alert">
+        <svg class="bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 3.9L1.8 19a2 2 0 001.7 3h17a2 2 0 001.7-3L12.7 3.9a2 2 0 00-3.4 0z"/></svg>
+        <span data-i18n="major_alert_on">تنبيه ±20$</span>
+      </button>
+      <a href="https://wa.me/905366184381" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav_cta">راسلنا واتساب</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="ticker-bar">
+  <div class="ticker-track" id="tickerTrack">
+    <span class="item"><span class="live-dot"></span> <span data-i18n="ticker_oz">الأونصة عالميًا:</span> <span class="v-oz-usd" dir="ltr">—</span></span>
+    <span class="item"><span data-i18n="ticker_g24">غرام عيار 24:</span> <span class="v-g24-try" dir="ltr">—</span></span>
+    <span class="item"><span data-i18n="ticker_g21">غرام عيار 21:</span> <span class="v-g21-try" dir="ltr">—</span></span>
+    <span class="item"><span data-i18n="ticker_g18">غرام عيار 18:</span> <span class="v-g18-try" dir="ltr">—</span></span>
+    <span class="item"><span data-i18n="ticker_g14">غرام عيار 14:</span> <span class="v-g14-try" dir="ltr">—</span></span>
+    <span class="item v-source" data-i18n="ticker_source">أسعار حيّة</span>
+    <span class="item"><span class="live-dot"></span> <span data-i18n="ticker_oz">الأونصة عالميًا:</span> <span class="v-oz-usd" dir="ltr">—</span></span>
+    <span class="item"><span data-i18n="ticker_g24">غرام عيار 24:</span> <span class="v-g24-try" dir="ltr">—</span></span>
+    <span class="item"><span data-i18n="ticker_g21">غرام عيار 21:</span> <span class="v-g21-try" dir="ltr">—</span></span>
+    <span class="item"><span data-i18n="ticker_g18">غرام عيار 18:</span> <span class="v-g18-try" dir="ltr">—</span></span>
+    <span class="item"><span data-i18n="ticker_g14">غرام عيار 14:</span> <span class="v-g14-try" dir="ltr">—</span></span>
+    <span class="item v-source" data-i18n="ticker_source">أسعار حيّة</span>
+  </div>
+</div>
+<div class="promo-bar" aria-hidden="true">
+  <div class="promo-track">
+
+    <span class="promo-item"><span data-i18n="promo_brand">شركة ومكتب رباح لتجارة الذهب والمجوهرات</span></span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+    <span class="promo-item"><span data-i18n="promo_phone_label">للاستفسار:</span> <span class="promo-phone">+90 536 618 43 81</span></span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+    <span class="promo-item" data-i18n="promo_1">ذهب ومجوهرات بالجملة — عيارات 18 و21 و24</span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+    <span class="promo-item" data-i18n="promo_2">شحن آمن إلى العراق وأكثر من 20 دولة</span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+    <span class="promo-item" data-i18n="promo_3">أسعار جملة تنافسية بدون وسطاء</span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+    <span class="promo-item" data-i18n="promo_4">فحص العيار وتوثيق الوزن لكل شحنة</span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+
+    <span class="promo-item"><span data-i18n="promo_brand">شركة ومكتب رباح لتجارة الذهب والمجوهرات</span></span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+    <span class="promo-item"><span data-i18n="promo_phone_label">للاستفسار:</span> <span class="promo-phone">+90 536 618 43 81</span></span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+    <span class="promo-item" data-i18n="promo_1">ذهب ومجوهرات بالجملة — عيارات 18 و21 و24</span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+    <span class="promo-item" data-i18n="promo_2">شحن آمن إلى العراق وأكثر من 20 دولة</span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+    <span class="promo-item" data-i18n="promo_3">أسعار جملة تنافسية بدون وسطاء</span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+    <span class="promo-item" data-i18n="promo_4">فحص العيار وتوثيق الوزن لكل شحنة</span>
+    <span class="promo-item"><span class="sep">◆</span></span>
+  </div>
+</div>
+
+
+<main>
+
+  <section class="hero">
+  <div class="hero-bg-art" aria-hidden="true">
+    <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <defs>
+        <linearGradient id="istGold" x1="80" y1="40" x2="720" y2="520" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#F2DC9A"/>
+          <stop offset=".5" stop-color="#E8C468"/>
+          <stop offset="1" stop-color="#C9A227"/>
+        </linearGradient>
+        <radialGradient id="istGlow" cx="50%" cy="48%" r="50%">
+          <stop offset="0%" stop-color="#E8C468" stop-opacity=".35"/>
+          <stop offset="70%" stop-color="#E8C468" stop-opacity=".05"/>
+          <stop offset="100%" stop-color="#E8C468" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="400" cy="270" r="250" fill="url(#istGlow)"/>
+      <circle cx="400" cy="270" r="200" stroke="url(#istGold)" stroke-width="1.6"/>
+      <ellipse cx="400" cy="270" rx="200" ry="70" stroke="url(#istGold)" stroke-width="1" opacity=".7"/>
+      <ellipse cx="400" cy="270" rx="140" ry="200" stroke="url(#istGold)" stroke-width="1" opacity=".55"/>
+      <ellipse cx="400" cy="270" rx="70" ry="200" stroke="url(#istGold)" stroke-width="1" opacity=".45"/>
+      <path d="M205 200c40-28 110-45 195-45s155 17 195 45" stroke="url(#istGold)" stroke-width=".9" opacity=".5"/>
+      <path d="M205 340c40 28 110 45 195 45s155-17 195-45" stroke="url(#istGold)" stroke-width=".9" opacity=".5"/>
+      <path d="M400 70c55 45 90 115 90 200s-35 155-90 200" stroke="url(#istGold)" stroke-width=".8" opacity=".4"/>
+      <path d="M400 70c-55 45-90 115-90 200s35 155 90 200" stroke="url(#istGold)" stroke-width=".8" opacity=".4"/>
+      <path d="M310 210c20-18 48-22 70-12 18 8 28 22 42 28 12 5 30 2 40 12 8 8 6 22-2 28-14 10-36 6-50 14-12 6-18 20-32 22-20 4-38-10-48-26-8-12-6-28-20-36z" stroke="url(#istGold)" stroke-width="1.2" fill="url(#istGold)" fill-opacity=".08"/>
+      <path d="M455 235c18-10 40-8 55 4 12 10 14 28 8 42-6 12-20 18-34 16-16-2-28-14-36-28-6-12-4-24 7-34z" stroke="url(#istGold)" stroke-width="1" fill="url(#istGold)" fill-opacity=".06"/>
+      <g transform="translate(120 400)" stroke="url(#istGold)" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 78 H560" stroke-width="1.2" opacity=".5"/>
+        <path d="M120 78 V18" stroke-width="3"/>
+        <path d="M420 78 V18" stroke-width="3"/>
+        <path d="M112 18 H128" stroke-width="2.5"/>
+        <path d="M412 18 H428" stroke-width="2.5"/>
+        <path d="M20 78 Q120 8 220 40 Q320 72 420 8 Q500 40 540 78" stroke-width="2" opacity=".9"/>
+        <path d="M40 55 H500" stroke-width="2.2"/>
+        <path d="M80 42 V55M100 32 V55M140 22 V55M160 24 V55M180 28 V55M200 34 V55M240 46 V55M280 58 V55M300 54 V55M340 40 V55M360 32 V55M380 26 V55M400 20 V55M440 24 V55M460 34 V55M480 44 V55" stroke-width="1" opacity=".55"/>
+      </g>
+      <g transform="translate(560 145)" stroke="url(#istGold)" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="34" y="70" width="36" height="130" rx="2" stroke-width="1.8" fill="url(#istGold)" fill-opacity=".06"/>
+        <rect x="22" y="55" width="60" height="22" rx="3" stroke-width="1.8" fill="url(#istGold)" fill-opacity=".1"/>
+        <path d="M28 55 L52 8 L76 55 Z" stroke-width="1.8" fill="url(#istGold)" fill-opacity=".12"/>
+        <path d="M52 8 V0" stroke-width="1.6"/>
+        <circle cx="52" cy="-2" r="2.5" fill="url(#istGold)" stroke="none"/>
+        <path d="M42 90 V108M62 90 V108M42 125 V145M62 125 V145M42 160 V178M62 160 V178" stroke-width="1.4" opacity=".7"/>
+        <path d="M28 200 H76" stroke-width="2"/>
+        <path d="M20 208 H84" stroke-width="1.5" opacity=".6"/>
+      </g>
+      <g transform="translate(418 248)">
+        <path d="M0-18c-8 0-14 6-14 14 0 12 14 26 14 26s14-14 14-26c0-8-6-14-14-14z" stroke="url(#istGold)" stroke-width="1.5" fill="url(#istGold)" fill-opacity=".2"/>
+        <circle cx="0" cy="-4" r="4" fill="url(#istGold)" stroke="none" opacity=".8"/>
+      </g>
+    </svg>
+  </div>
+
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow" data-i18n="hero_eyebrow">توريد بالجملة — العراق وكافة دول العالم</span>
+        <h1 data-i18n-html="hero_title">من ميزان الصائغ <em>إلى موازين العالم</em></h1>
+        <p class="lead" data-i18n="hero_lead">
+          شركة ومكتب رباح لتجارة الذهب والمجوهرات يورّد الذهب والمجوهرات بالجملة لتجار ومحلات المجوهرات، بعيارات موثقة
+          وأسعار تنافسية وشحن آمن يصل إلى العراق وأكثر من عشرين دولة حول العالم.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/905366184381" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="hero_btn_quote">احصل على عرض سعر</a>
+          <a href="#products" class="btn btn-ghost" data-i18n="hero_btn_products">تصفّح منتجاتنا</a>
+        </div>
+      </div>
+
+      <div class="hero-panel reveal">
+        <div class="scale-icon">
+          <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="60" y1="8" x2="60" y2="70" stroke="#C9A227" stroke-width="2"/>
+            <line x1="20" y1="24" x2="100" y2="24" stroke="#C9A227" stroke-width="2"/>
+            <circle cx="60" cy="24" r="4" fill="#E8C468"/>
+            <path d="M20 24 L10 52 Q20 62 30 52 Z" stroke="#C9A227" stroke-width="1.6"/>
+            <path d="M100 24 L90 52 Q100 62 110 52 Z" stroke="#C9A227" stroke-width="1.6"/>
+            <line x1="20" y1="24" x2="10" y2="52" stroke="#C9A227" stroke-width="1.4"/>
+            <line x1="20" y1="24" x2="30" y2="52" stroke="#C9A227" stroke-width="1.4"/>
+            <line x1="100" y1="24" x2="90" y2="52" stroke="#C9A227" stroke-width="1.4"/>
+            <line x1="100" y1="24" x2="110" y2="52" stroke="#C9A227" stroke-width="1.4"/>
+            <rect x="40" y="70" width="40" height="6" rx="1" fill="#8C7534"/>
+            <rect x="50" y="76" width="20" height="8" rx="1" fill="#8C7534"/>
+          </svg>
+        </div>
+        <h3 data-i18n="panel_title">عيارات موثوقة</h3>
+        <p class="sub" data-i18n="panel_sub">كل قطعة تُفحص وتُدمغ قبل أن تصل إليك</p>
+        <div class="stat-list">
+          <div class="stat-row"><span data-i18n="stat_karats">العيارات المتوفرة</span><span>24 / 21 / 18 / 14</span></div>
+          <div class="stat-row"><span data-i18n="stat_shipping">وجهات الشحن</span><span data-i18n="stat_shipping_val">العراق + 20 دولة</span></div>
+          <div class="stat-row"><span data-i18n="stat_type">نوع التعامل</span><span data-i18n="stat_type_val">جملة فقط</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="about_eyebrow">من نحن</span>
+        <h2 data-i18n="about_title">بيت خبرة في عالم الذهب</h2>
+        <p data-i18n="about_p1">
+          شركة ومكتب رباح لتجارة الذهب والمجوهرات وجهة موثوقة لتجار الذهب والمجوهرات الراغبين في التوريد بالجملة.
+          نجمع بين خبرة الصاغة التقليدية ودقّة الميزان الحديث، لنؤمّن لعملائنا في العراق
+          وخارجه ذهبًا ومجوهرات بعيارات موثّقة وأسعار جملة تُبنى على حجم طلبك مباشرة، دون وسطاء.
+        </p>
+        <p data-i18n="about_p2">
+          نتعامل حصريًا مع محلات المجوهرات والموزّعين والتجار، ونواكب كل شحنة من لحظة
+          التدقيق على العيار وحتى وصولها سليمة إلى بابك.
+        </p>
+      </div>
+      <div class="ledger reveal">
+        <div class="ledger-item">
+          <div class="mark" data-i18n="num_1">١</div>
+          <div class="txt"><strong data-i18n="ledger_1_t">فحص العيار قطعة بقطعة</strong><span data-i18n="ledger_1_d">تدقيق دقيق قبل التعبئة</span></div>
+        </div>
+        <div class="ledger-item">
+          <div class="mark" data-i18n="num_2">٢</div>
+          <div class="txt"><strong data-i18n="ledger_2_t">توثيق الوزن والدمغة</strong><span data-i18n="ledger_2_d">سجل واضح لكل شحنة</span></div>
+        </div>
+        <div class="ledger-item">
+          <div class="mark" data-i18n="num_3">٣</div>
+          <div class="txt"><strong data-i18n="ledger_3_t">تغليف وتأمين الشحنات</strong><span data-i18n="ledger_3_d">حماية تناسب طبيعة البضاعة</span></div>
+        </div>
+        <div class="ledger-item">
+          <div class="mark" data-i18n="num_4">٤</div>
+          <div class="txt"><strong data-i18n="ledger_4_t">متابعة يومية لسعر الذهب</strong><span data-i18n="ledger_4_d">تسعير عادل ومحدّث</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="products_eyebrow">منتجاتنا</span>
+        <h2 data-i18n="products_title">تشكيلة تناسب رفوف محلك</h2>
+        <p data-i18n="products_desc">مجموعة متكاملة من الذهب والمجوهرات، جاهزة للتوريد بالجملة وبعيارات متعددة.</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card reveal">
+          <div class="product-cover">
+            <img src="images/product-rings.jpg" alt="خواتم ذهب" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="cover-fallback" style="display:none">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/><path d="M16 28h16M20 20h8" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+          </div>
+          <div class="product-body">
+            <h3 data-i18n="prod_1_t">خواتم ذهب</h3>
+            <p data-i18n="prod_1_d">تشكيلة واسعة من الخواتم بعيارات 18 و21 و24، مناسبة للمحلات والموزّعين.</p>
+            <a href="products-rings.html" class="card-link" data-i18n="view_gallery">عرض الصور ←</a>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-cover">
+            <img src="images/product-bracelets.jpg" alt="أساور وسلاسل" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="cover-fallback" style="display:none">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/><path d="M16 28h16M20 20h8" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+          </div>
+          <div class="product-body">
+            <h3 data-i18n="prod_2_t">أساور وسلاسل</h3>
+            <p data-i18n="prod_2_d">أساور وسلاسل ذهبية بتصاميم تقليدية وعصرية، جاهزة للتوريد الفوري.</p>
+            <a href="products-bracelets.html" class="card-link" data-i18n="view_gallery">عرض الصور ←</a>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-cover">
+            <img src="images/product-sets.jpg" alt="أطقم وقلائد" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="cover-fallback" style="display:none">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/><path d="M16 28h16M20 20h8" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+          </div>
+          <div class="product-body">
+            <h3 data-i18n="prod_3_t">أطقم وقلائد</h3>
+            <p data-i18n="prod_3_d">أطقم مجوهرات متكاملة تناسب المعارض والمناسبات الكبرى.</p>
+            <a href="products-sets.html" class="card-link" data-i18n="view_gallery">عرض الصور ←</a>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-cover">
+            <img src="images/product-bullion.jpg" alt="سبائك ذهب" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="cover-fallback" style="display:none">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/><path d="M16 28h16M20 20h8" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+          </div>
+          <div class="product-body">
+            <h3 data-i18n="prod_4_t">سبائك ذهب</h3>
+            <p data-i18n="prod_4_d">سبائك موثّقة الوزن والعيار، مناسبة للتجار والمستثمرين.</p>
+            <a href="products-bullion.html" class="card-link" data-i18n="view_gallery">عرض الصور ←</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="videos" id="videos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="videos_eyebrow">فيديوهات المكتب</span>
+        <h2 data-i18n="videos_title">إعلانات ومقاطع من أعمالنا</h2>
+        <p data-i18n="videos_desc">شاهِد فيديوهات تعريفية وإعلانات المكتب. يمكنكم إضافة مقاطعكم بسهولة كما هو موضّح أدناه.</p>
+      </div>
+      <div class="tip reveal" data-i18n-html="videos_tip">
+        <b>كيف تضيف فيديو؟</b><br>
+        1) ضع الملف في المجلد <code>videos/</code> باسم <code>1.mp4</code> ثم <code>2.mp4</code> ثم <code>3.mp4</code>… (أو webm)<br>
+        2) أو لفيديو يوتيوب: ضع ملف نصي <code>1.youtube.txt</code> يحتوي رقم الفيديو فقط (مثال: <code>dQw4w9WgXcQ</code>)<br>
+        3) حدّث الصفحة — الفيديو يظهر تلقائياً. لا حاجة لتعديل ملفات HTML.
+      </div>
+      <div class="videos-grid" id="videosGrid"></div>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="why_eyebrow">لماذا رباح</span>
+        <h2 data-i18n="why_title">ثقة تُبنى قطعة بقطعة</h2>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="icon"><svg viewBox="0 0 38 38" fill="none"><path d="M19 4l12 5v9c0 8-5 13-12 16C12 31 7 26 7 18V9l12-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <div><h3 data-i18n="why_1_t">نقاء مضمون</h3><p data-i18n="why_1_d">كل قطعة تُفحص وتُدمغ قبل الشحن، بلا استثناء.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="icon"><svg viewBox="0 0 38 38" fill="none"><path d="M6 28h26M11 28V16M19 28V9M27 28v19" stroke="currentColor" stroke-width="2"/></svg></div>
+        <div><h3 data-i18n="why_2_t">أسعار الجملة</h3><p data-i18n="why_2_d">تسعير مباشر يناسب حجم طلبك دون وسطاء إضافيين.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="icon"><svg viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="14" stroke="currentColor" stroke-width="2"/><path d="M5 19h28M19 5c4 4 6 9 6 14s-2 10-6 14c-4-4-6-9-6-14s2-10 6-14z" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <div><h3 data-i18n="why_3_t">شحن عالمي آمن</h3><p data-i18n="why_3_d">توصيل إلى العراق وكافة الدول، مع تتبع وتأمين كامل للشحنة.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="icon"><svg viewBox="0 0 38 38" fill="none"><path d="M19 4v30M9 12l10-8 10 8M9 12v10a10 10 0 0020 0V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div><h3 data-i18n="why_4_t">خبرة موروثة</h3><p data-i18n="why_4_d">أجيال من الصاغة يقفون خلف كل قطعة نوردها لعملائنا.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="shop-retail" id="shop" style="border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="shop_eyebrow">تسوق معنا</span>
+        <h2 data-i18n="shop_title">جملة ومفرد — حسب احتياجك</h2>
+        <p data-i18n="shop_desc">نخدم التجار بالجملة، ونوفّر أيضاً طلبات المفرد للزبائن الراغبين بقطع محددة.</p>
+      </div>
+      <div class="mode-pills reveal" id="shopModePills">
+        <button type="button" class="active" data-mode="wholesale" data-i18n="shop_mode_wholesale">طلب جملة</button>
+        <button type="button" data-mode="retail" data-i18n="shop_mode_retail">تسوق بالمفرد</button>
+      </div>
+      <div class="products-grid" style="margin-bottom:8px;">
+        <div class="product-card reveal">
+          <div class="product-body">
+            <h3 data-i18n="shop_w_t">للتجار (جملة)</h3>
+            <p data-i18n="shop_w_d">كميات وكميات، تسعير حسب الحجم، شحن دولي، وفاتورة عبر واتساب أو PDF.</p>
+            <a href="#order" class="card-link" data-i18n="shop_w_cta">انتقل لطلب الجملة ←</a>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-body">
+            <h3 data-i18n="shop_r_t">للأفراد (مفرد)</h3>
+            <p data-i18n="shop_r_d">اختر الفئة والقطعة من المعرض، وأرسل طلباً بالمفرد عبر واتساب مع رقم المنتج.</p>
+            <a href="#order" class="card-link" id="goRetailOrder" data-i18n="shop_r_cta">اطلب بالمفرد ←</a>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-body">
+            <h3 data-i18n="shop_g_t">تصفّح المعرض</h3>
+            <p data-i18n="shop_g_d">خواتم، أساور، أطقم وسبائك — مع أرقام تحت الصور لتسهيل الطلب.</p>
+            <a href="#products" class="card-link" data-i18n="shop_g_cta">عرض المنتجات ←</a>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-body">
+            <h3 data-i18n="shop_c_t">محوّل العيار</h3>
+            <p data-i18n="shop_c_d">حوّل الوزن بين 24 و21 و18 و14 وقدّر الذهب الصافي وسعره التقريبي.</p>
+            <a href="#converter" class="card-link" data-i18n="shop_c_cta">افتح المحوّل ←</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="converter" id="converter">
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center;">
+        <span class="eyebrow" data-i18n="conv_eyebrow">محوّل الذهب</span>
+        <h2 data-i18n="conv_title">تحويل بين العيارات</h2>
+        <p data-i18n="conv_desc">أدخل الوزن بال غرام واختر العيار الحالي والعيار المطلوب.</p>
+      </div>
+      <div class="converter-panel reveal">
+        <div class="conv-grid">
+          <div class="field">
+            <label data-i18n="conv_weight">الوزن (غرام)</label>
+            <input type="number" id="convWeight" min="0" step="0.01" value="10" dir="ltr">
+          </div>
+          <div class="field">
+            <label data-i18n="conv_from">من عيار</label>
+            <select id="convFrom">
+              <option value="24">24K</option>
+              <option value="21" selected>21K</option>
+              <option value="18">18K</option>
+              <option value="14">14K</option>
+            </select>
+          </div>
+          <div class="field">
+            <label data-i18n="conv_to">إلى عيار</label>
+            <select id="convTo">
+              <option value="24" selected>24K</option>
+              <option value="21">21K</option>
+              <option value="18">18K</option>
+              <option value="14">14K</option>
+            </select>
+          </div>
+        </div>
+        <div class="conv-results" id="convResults">
+          <div class="row"><span data-i18n="conv_pure">الذهب الصافي (عيار 24)</span><strong id="convPure">—</strong></div>
+          <div class="row main-result"><span data-i18n="conv_result">الوزن بالعيار المطلوب</span><strong id="convOut">—</strong></div>
+          <div class="row"><span data-i18n="conv_value">قيمة تقريبية (TRY)</span><strong id="convTry">—</strong></div>
+        </div>
+        <p class="order-note" style="margin-top:14px;" data-i18n="conv_note">القيمة تقريبية حسب سعر الغرام الحيّ في الشريط أعلاه، وليست عرض سعر نهائي.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="reviews_eyebrow">آراء العملاء</span>
+        <h2 data-i18n="reviews_title">تقييم الزبائن والتجار</h2>
+        <p data-i18n="reviews_desc">نعتز بثقة عملائنا. يمكنك قراءة التقييمات أو إرسال تقييمك عبر واتساب.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p data-i18n="rev_1_t">تعامل راقٍ والتزام بالمواعيد. الشحنة وصلت إلى بغداد بحالة ممتازة والعيار مطابق.</p>
+          <div class="who" data-i18n="rev_1_n">أحمد ك.<span data-i18n="rev_1_c">تاجر — بغداد</span></div>
+        </div>
+        <div class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p data-i18n="rev_2_t">أسعار الجملة واضحة والمتابعة على واتساب سريعة. نكرر الطلبات بثقة.</p>
+          <div class="who" data-i18n="rev_2_n">سارة م.<span data-i18n="rev_2_c">محل مجوهرات — أربيل</span></div>
+        </div>
+        <div class="review-card reveal">
+          <div class="stars">★★★★☆</div>
+          <p data-i18n="rev_3_t">طلبت قطعة بالمفرد لأول مرة وكان التواصل سهلاً والتوضيح عن العيار ممتاز.</p>
+          <div class="who" data-i18n="rev_3_n">خالد ر.<span data-i18n="rev_3_c">زبون مفرد — إسطنبول</span></div>
+        </div>
+      </div>
+      <div class="review-form-wrap reveal">
+        <h3 style="margin-bottom:14px;font-size:18px;" data-i18n="rev_form_title">أضف تقييمك</h3>
+        <form id="reviewForm">
+          <div class="field">
+            <label data-i18n="rev_form_name">الاسم</label>
+            <input type="text" id="revName" required>
+          </div>
+          <div class="field">
+            <label data-i18n="rev_form_city">المدينة / الدولة</label>
+            <input type="text" id="revCity">
+          </div>
+          <div class="field">
+            <label data-i18n="rev_form_stars">التقييم</label>
+            <div class="star-pick" id="starPick">
+              <button type="button" data-s="1">★</button>
+              <button type="button" data-s="2">★</button>
+              <button type="button" data-s="3">★</button>
+              <button type="button" data-s="4">★</button>
+              <button type="button" data-s="5">★</button>
+            </div>
+            <input type="hidden" id="revStars" value="5">
+          </div>
+          <div class="field">
+            <label data-i18n="rev_form_text">رأيك</label>
+            <textarea id="revText" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" data-i18n="rev_form_submit">إرسال التقييم عبر واتساب</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <div class="wrap order-grid">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="order_eyebrow">طلب جملة</span>
+        <h2 data-i18n="order_title">أرسل طلبك خلال دقيقة</h2>
+        <p data-i18n="order_desc" style="color:var(--muted);font-size:16px;margin-top:12px;max-width:42ch;">
+          املأ البيانات وسنفتح واتساب برسالة جاهزة تتضمن تفاصيل طلبك. لا رسوم ولا تسجيل.
+        </p>
+      </div>
+      <form class="order-form reveal" id="orderForm">
+        <div class="field">
+          <label data-i18n="order_type">نوع الطلب</label>
+          <select id="oType">
+            <option value="wholesale" data-i18n="shop_mode_wholesale">طلب جملة</option>
+            <option value="retail" data-i18n="shop_mode_retail">تسوق بالمفرد</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label data-i18n="order_name">الاسم / اسم المحل</label>
+            <input type="text" id="oName" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label data-i18n="order_country">الدولة</label>
+            <input type="text" id="oCountry" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label data-i18n="order_category">الفئة</label>
+            <select id="oCat">
+              <option value="rings" data-i18n="prod_1_t">خواتم ذهب</option>
+              <option value="bracelets" data-i18n="prod_2_t">أساور وسلاسل</option>
+              <option value="sets" data-i18n="prod_3_t">أطقم وقلائد</option>
+              <option value="bullion" data-i18n="prod_4_t">سبائك ذهب</option>
+              <option value="mixed" data-i18n="order_cat_mixed">تشكيلة متنوعة</option>
+            </select>
+          </div>
+          <div class="field">
+            <label data-i18n="order_qty">الكمية التقريبية</label>
+            <input type="text" id="oQty" placeholder="..." data-i18n-placeholder="order_qty_ph">
+          </div>
+        </div>
+        <div class="field">
+          <label data-i18n="order_codes">أرقام المنتجات (من تحت الصور)</label>
+          <input type="text" id="oCodes" data-i18n-placeholder="order_codes_ph" placeholder="مثال: R-01, R-03, BR-02" dir="ltr" style="direction:ltr;text-align:left">
+        </div>
+        <div class="field">
+          <label data-i18n="order_notes">ملاحظات</label>
+          <textarea id="oNotes" data-i18n-placeholder="order_notes_ph"></textarea>
+        </div>
+        <div class="order-actions">
+          <button type="submit" class="btn btn-primary" data-i18n="order_submit">إرسال عبر واتساب</button>
+          <button type="button" class="btn btn-secondary" id="orderPdfBtn" data-i18n="order_pdf">تصدير PDF</button>
+        </div>
+        <p class="order-note" data-i18n="order_note">واتساب يفتح برسالة فاتورة جاهزة. زر PDF ينشئ فاتورة للطباعة أو الحفظ.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-panel reveal">
+        <div>
+          <h2 data-i18n="contact_title">جاهزون لاستقبال طلبك بالجملة</h2>
+          <p data-i18n="contact_desc">تواصل معنا لمعرفة الأسعار المحدّثة وتفاصيل التوريد والشحن إلى بلدك، أينما كنت.</p>
+          <a href="https://wa.me/905366184381" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="contact_btn">راسلنا الآن عبر واتساب</a>
+        </div>
+        <div>
+          <ul class="contact-list">
+            <li><span class="icon"><svg viewBox="0 0 20 20" fill="none"><path d="M3 5l7 6 7-6M3 5v10h14V5" stroke="currentColor" stroke-width="1.6"/></svg></span> <a class="val" href="mailto:alrabahrabah5@gmail.com" dir="ltr">alrabahrabah5@gmail.com</a></li>
+            <li><span class="icon"><svg viewBox="0 0 20 20" fill="none"><path d="M4 3h3l2 5-2 1a11 11 0 006 6l1-2 5 2v3a2 2 0 01-2 2C9 20 0 11 0 4a2 2 0 012-2z" stroke="currentColor" stroke-width="1.4"/></svg></span> <span class="val">+90 536 618 43 81</span></li>
+            <li><span class="icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2a6 6 0 016 6c0 5-6 10-6 10S4 13 4 8a6 6 0 016-6z" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.4"/></svg></span> <span class="val" data-i18n="contact_address">تركيا، إسطنبول، ييني بوسنة، كيومجكنت</span></li>
+          </ul>
+          <p class="contact-note" data-i18n-html="contact_note">مصادر أسعار الذهب الحيّة في الشريط أعلى الصفحة: <a href="https://goldprice.dev" target="_blank" rel="noopener" class="src-link">goldprice.dev</a> · <a href="https://canlipiyasalar.haremaltin.com/" target="_blank" rel="noopener" class="src-link">Harem Altın</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="gFoot" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2DC9A"/>
+      <stop offset=".5" stop-color="#E8C468"/>
+      <stop offset="1" stop-color="#C9A227"/>
+    </linearGradient>
+  </defs>
+  <!-- full circle frame -->
+  <circle cx="32" cy="32" r="27" stroke="url(#gFoot)" stroke-width="4.5"/>
+  <!-- inner R monogram -->
+  <path fill="url(#gFoot)" d="
+    M18 18h16c7.5 0 13 4.2 13 11.2 0 5.2-3 9-8 10.6L46 46h-7.2L32.5 39H25v7H18V18zm7 7v8.5h9.5c3.4 0 5.8-1.7 5.8-4.3S37.9 25 34.5 25H25z
+  "/>
+</svg>
+    <strong data-i18n="footer_brand">شركة ومكتب رباح لتجارة الذهب والمجوهرات</strong>
+    <p data-i18n="footer_copy">© جميع الحقوق محفوظة — شركة ومكتب رباح لتجارة الذهب والمجوهرات</p>
+  </div>
+</footer>
+
+<script>
+  const I18N = {
+    ar: {
+      page_title: "شركة ومكتب رباح لتجارة الذهب والمجوهرات | جملة ومفرد",
+      brand_name: "رباح",
+      brand_tag: "شركة ومكتب لتجارة الذهب والمجوهرات",
+      nav_about: "من نحن",
+      nav_products: "منتجاتنا",
+      nav_why: "لماذا رباح",
+      nav_contact: "تواصل معنا",
+      nav_cta: "راسلنا واتساب",
+      alert_on: "تنبيه السعر",
+      alert_off: "التنبيه متوقف",
+      major_alert_on: "تنبيه ±20$",
+      major_alert_off: "±20$ متوقف",
+      major_modal_title: "انتبه لتغيّر سعر الأونصة",
+      major_modal_desc: "تحرّك سعر الأونصة أكثر من 20 دولاراً مقارنة بآخر قراءة.",
+      major_modal_ok: "حسناً",
+      major_modal_mute: "إيقاف هذا التنبيه",
+      major_speak_up: "انتبه لتغير سعر الأونصة. ارتفع السعر أكثر من عشرين دولاراً.",
+      major_speak_down: "انتبه لتغير سعر الأونصة. انخفض السعر أكثر من عشرين دولاراً.",
+
+            videos_eyebrow: "فيديوهات المكتب",
+      videos_title: "إعلانات ومقاطع من أعمالنا",
+      videos_desc: "شاهِد فيديوهات تعريفية وإعلانات المكتب. يمكنكم إضافة مقاطعكم بسهولة كما هو موضّح أدناه.",
+      videos_tip: "<b>كيف تضيف فيديو؟</b><br>1) <b>من جهازك:</b> ضع الملف في <code>videos/</code> باسم <code>1.mp4</code> ثم <code>2.mp4</code>…<br>2) <b>من يوتيوب:</b> افتح ملف الصفحة وابحث عن <code>YOUTUBE_IDS</code> وأضف رقم الفيديو بين علامتي اقتباس.<br>3) حدّث الصفحة (F5).",
+      videos_empty_title: "لا توجد فيديوهات بعد",
+      videos_empty_desc: "أضف ملفات إلى videos/ بأسماء 1.mp4 أو 1.youtube.txt ثم حدّث الصفحة",
+      videos_local: "فيديو المكتب",
+      videos_yt: "فيديو يوتيوب",
+order_eyebrow: "طلب جملة",
+      order_title: "أرسل طلبك خلال دقيقة",
+      order_desc: "املأ البيانات وسنفتح واتساب برسالة جاهزة تتضمن تفاصيل طلبك. لا رسوم ولا تسجيل.",
+      order_name: "الاسم / اسم المحل",
+      order_country: "الدولة",
+      order_category: "الفئة",
+      order_cat_mixed: "تشكيلة متنوعة",
+      order_qty: "الكمية التقريبية",
+      order_qty_ph: "مثال: 50 قطعة أو 1 كغ",
+      order_codes: "أرقام المنتجات (من تحت الصور)",
+      order_codes_ph: "مثال: R-01, R-03, BR-02",
+      order_notes: "ملاحظات",
+      order_notes_ph: "عيار مطلوب، موديلات، موعد الشحن...",
+      order_submit: "إرسال عبر واتساب",
+      order_pdf: "تصدير PDF",
+      order_note: "سيتم فتح واتساب برسالة جاهزة يمكنك تعديلها قبل الإرسال.",
+      notif_perm: "تفعيل إشعارات السعر",
+
+      ticker_oz: "الأونصة عالميًا:",
+      ticker_g24: "غرام عيار 24:",
+      ticker_g21: "غرام عيار 21:",
+      
+      ticker_g14: "غرام عيار 14:",
+      shop_nav: "تسوق",
+      conv_nav: "محوّل العيار",
+      reviews_nav: "التقييمات",
+      shop_eyebrow: "تسوق معنا",
+      shop_title: "جملة ومفرد — حسب احتياجك",
+      shop_desc: "نخدم التجار بالجملة، ونوفّر أيضاً طلبات المفرد للزبائن الراغبين بقطع محددة.",
+      shop_mode_wholesale: "طلب جملة",
+      shop_mode_retail: "تسوق بالمفرد",
+      shop_w_t: "للتجار (جملة)",
+      shop_w_d: "كميات وتسعير حسب الحجم، شحن دولي، وفاتورة عبر واتساب أو PDF.",
+      shop_w_cta: "انتقل لطلب الجملة ←",
+      shop_r_t: "للأفراد (مفرد)",
+      shop_r_d: "اختر الفئة والقطعة من المعرض، وأرسل طلباً بالمفرد عبر واتساب مع رقم المنتج.",
+      shop_r_cta: "اطلب بالمفرد ←",
+      shop_g_t: "تصفّح المعرض",
+      shop_g_d: "خواتم، أساور، أطقم وسبائك — مع أرقام تحت الصور لتسهيل الطلب.",
+      shop_g_cta: "عرض المنتجات ←",
+      shop_c_t: "محوّل العيار",
+      shop_c_d: "حوّل الوزن بين 24 و21 و18 و14 وقدّر الذهب الصافي وسعره التقريبي.",
+      shop_c_cta: "افتح المحوّل ←",
+      order_type: "نوع الطلب",
+      conv_eyebrow: "محوّل الذهب",
+      conv_title: "تحويل بين العيارات",
+      conv_desc: "أدخل الوزن بالغرام واختر العيار الحالي والعيار المطلوب.",
+      conv_weight: "الوزن (غرام)",
+      conv_from: "من عيار",
+      conv_to: "إلى عيار",
+      conv_pure: "الذهب الصافي (عيار 24)",
+      conv_result: "الوزن بالعيار المطلوب",
+      conv_value: "قيمة تقريبية (TRY)",
+      conv_note: "القيمة تقريبية حسب سعر الغرام الحيّ وليست عرض سعر نهائي.",
+      reviews_eyebrow: "آراء العملاء",
+      reviews_title: "تقييم الزبائن والتجار",
+      reviews_desc: "نعتز بثقة عملائنا. يمكنك قراءة التقييمات أو إرسال تقييمك عبر واتساب.",
+      rev_1_t: "تعامل راقٍ والتزام بالمواعيد. الشحنة وصلت إلى بغداد بحالة ممتازة والعيار مطابق.",
+      rev_1_n: "أحمد ك.",
+      rev_1_c: "تاجر — بغداد",
+      rev_2_t: "أسعار الجملة واضحة والمتابعة على واتساب سريعة. نكرر الطلبات بثقة.",
+      rev_2_n: "سارة م.",
+      rev_2_c: "محل مجوهرات — أربيل",
+      rev_3_t: "طلبت قطعة بالمفرد لأول مرة وكان التواصل سهلاً والتوضيح عن العيار ممتاز.",
+      rev_3_n: "خالد ر.",
+      rev_3_c: "زبون مفرد — إسطنبول",
+      rev_form_title: "أضف تقييمك",
+      rev_form_name: "الاسم",
+      rev_form_city: "المدينة / الدولة",
+      rev_form_stars: "التقييم",
+      rev_form_text: "رأيك",
+      rev_form_submit: "إرسال التقييم عبر واتساب",
+      ticker_g18: "غرام عيار 18:",
+      ticker_source: "أسعار حيّة",
+      ticker_source_fail: "تعذّر تحميل السعر الحي حاليًا — للسعر الفعلي تواصل معنا",
+      promo_brand: "شركة ومكتب رباح لتجارة الذهب والمجوهرات",
+      promo_phone_label: "للاستفسار:",
+      promo_1: "ذهب ومجوهرات بالجملة — عيارات 18 و21 و24",
+      promo_2: "شحن آمن إلى العراق وأكثر من 20 دولة",
+      promo_3: "أسعار جملة تنافسية بدون وسطاء",
+      promo_4: "فحص العيار وتوثيق الوزن لكل شحنة",
+
+      ticker_source_multi: "أسعار حيّة — مصادر متعددة",
+      hero_eyebrow: "توريد بالجملة — العراق وكافة دول العالم",
+      hero_title: "من ميزان الصائغ <em>إلى موازين العالم</em>",
+      hero_lead: "شركة ومكتب رباح لتجارة الذهب والمجوهرات يورّد الذهب والمجوهرات بالجملة لتجار ومحلات المجوهرات، بعيارات موثقة وأسعار تنافسية وشحن آمن يصل إلى العراق وأكثر من عشرين دولة حول العالم.",
+      hero_btn_quote: "احصل على عرض سعر",
+      hero_btn_products: "تصفّح منتجاتنا",
+      panel_title: "عيارات موثوقة",
+      panel_sub: "كل قطعة تُفحص وتُدمغ قبل أن تصل إليك",
+      stat_karats: "العيارات المتوفرة",
+      stat_shipping: "وجهات الشحن",
+      stat_shipping_val: "العراق + 20 دولة",
+      stat_type: "نوع التعامل",
+      stat_type_val: "جملة فقط",
+      about_eyebrow: "من نحن",
+      about_title: "بيت خبرة في عالم الذهب",
+      about_p1: "شركة ومكتب رباح لتجارة الذهب والمجوهرات وجهة موثوقة لتجار الذهب والمجوهرات الراغبين في التوريد بالجملة. نجمع بين خبرة الصاغة التقليدية ودقّة الميزان الحديث، لنؤمّن لعملائنا في العراق وخارجه ذهبًا ومجوهرات بعيارات موثّقة وأسعار جملة تُبنى على حجم طلبك مباشرة، دون وسطاء.",
+      about_p2: "نتعامل حصريًا مع محلات المجوهرات والموزّعين والتجار، ونواكب كل شحنة من لحظة التدقيق على العيار وحتى وصولها سليمة إلى بابك.",
+      num_1: "١", num_2: "٢", num_3: "٣", num_4: "٤",
+      ledger_1_t: "فحص العيار قطعة بقطعة", ledger_1_d: "تدقيق دقيق قبل التعبئة",
+      ledger_2_t: "توثيق الوزن والدمغة", ledger_2_d: "سجل واضح لكل شحنة",
+      ledger_3_t: "تغليف وتأمين الشحنات", ledger_3_d: "حماية تناسب طبيعة البضاعة",
+      ledger_4_t: "متابعة يومية لسعر الذهب", ledger_4_d: "تسعير عادل ومحدّث",
+      products_eyebrow: "منتجاتنا",
+      products_title: "تشكيلة تناسب رفوف محلك",
+      products_desc: "مجموعة متكاملة من الذهب والمجوهرات، جاهزة للتوريد بالجملة وبعيارات متعددة.",
+      prod_1_t: "خواتم ذهب", prod_1_d: "تشكيلة واسعة من الخواتم بعيارات 18 و21 و24، مناسبة للمحلات والموزّعين.",
+      prod_2_t: "أساور وسلاسل", prod_2_d: "أساور وسلاسل ذهبية بتصاميم تقليدية وعصرية، جاهزة للتوريد الفوري.",
+      prod_3_t: "أطقم وقلائد", prod_3_d: "أطقم مجوهرات متكاملة تناسب المعارض والمناسبات الكبرى.",
+      prod_4_t: "سبائك ذهب", prod_4_d: "سبائك موثّقة الوزن والعيار، مناسبة للتجار والمستثمرين.",
+      view_gallery: "عرض الصور ←",
+      why_eyebrow: "لماذا رباح",
+      why_title: "ثقة تُبنى قطعة بقطعة",
+      why_1_t: "نقاء مضمون", why_1_d: "كل قطعة تُفحص وتُدمغ قبل الشحن، بلا استثناء.",
+      why_2_t: "أسعار الجملة", why_2_d: "تسعير مباشر يناسب حجم طلبك دون وسطاء إضافيين.",
+      why_3_t: "شحن عالمي آمن", why_3_d: "توصيل إلى العراق وكافة الدول، مع تتبع وتأمين كامل للشحنة.",
+      why_4_t: "خبرة موروثة", why_4_d: "أجيال من الصاغة يقفون خلف كل قطعة نوردها لعملائنا.",
+      contact_title: "جاهزون لاستقبال طلبك بالجملة",
+      contact_desc: "تواصل معنا لمعرفة الأسعار المحدّثة وتفاصيل التوريد والشحن إلى بلدك، أينما كنت.",
+      contact_btn: "راسلنا الآن عبر واتساب",
+      contact_address: "تركيا، إسطنبول، ييني بوسنة، كيومجكنت",
+      contact_note: 'مصادر أسعار الذهب الحيّة: <a href="https://goldprice.dev" target="_blank" rel="noopener" class="src-link">goldprice.dev</a> · <a href="https://canlipiyasalar.haremaltin.com/" target="_blank" rel="noopener" class="src-link">Harem Altın</a>.',
+      footer_brand: "شركة ومكتب رباح لتجارة الذهب والمجوهرات",
+      footer_copy: "© جميع الحقوق محفوظة — شركة ومكتب رباح لتجارة الذهب والمجوهرات"
+    },
+    en: {
+      page_title: "Rabah Co. & Office for Gold & Jewelry Trading",
+      brand_name: "Rabah",
+      brand_tag: "Gold & Jewelry Trading Co.",
+      nav_about: "About",
+      nav_products: "Products",
+      nav_why: "Why Rabah",
+      nav_contact: "Contact",
+      nav_cta: "WhatsApp Us",
+      alert_on: "Price alert",
+      alert_off: "Alert off",
+      major_alert_on: "±$20 alert",
+      major_alert_off: "±$20 off",
+      major_modal_title: "Watch the ounce price change",
+      major_modal_desc: "The gold ounce moved by more than $20 since the last reading.",
+      major_modal_ok: "OK",
+      major_modal_mute: "Disable this alert",
+      major_speak_up: "Attention. The ounce price rose by more than twenty dollars.",
+      major_speak_down: "Attention. The ounce price fell by more than twenty dollars.",
+
+            videos_eyebrow: "Office videos",
+      videos_title: "Ads & clips from our work",
+      videos_desc: "Watch intro videos and office ads. Add your clips easily as explained below.",
+      videos_tip: "<b>How to add a video?</b><br>1) Put the file in <code>videos/</code> as <code>1.mp4</code>, <code>2.mp4</code>, <code>3.mp4</code>… (or webm)<br>2) Or for YouTube: create <code>1.youtube.txt</code> containing only the video ID (e.g. <code>dQw4w9WgXcQ</code>)<br>3) Refresh the page — the video appears automatically.",
+      videos_empty_title: "No videos yet",
+      videos_empty_desc: "Add files to videos/ as 1.mp4 or 1.youtube.txt then refresh",
+      videos_local: "Office video",
+      videos_yt: "YouTube video",
+order_eyebrow: "Wholesale order",
+      order_title: "Send your order in a minute",
+      order_desc: "Fill in the details and we will open WhatsApp with a ready message. No fees, no registration.",
+      order_name: "Name / shop name",
+      order_country: "Country",
+      order_category: "Category",
+      order_cat_mixed: "Mixed selection",
+      order_qty: "Approximate quantity",
+      order_qty_ph: "e.g. 50 pieces or 1 kg",
+      order_codes: "Product codes (under photos)",
+      order_codes_ph: "e.g. R-01, R-03, BR-02",
+      order_notes: "Notes",
+      order_notes_ph: "Karat, models, shipping time...",
+      order_submit: "Send via WhatsApp",
+      order_pdf: "Export PDF",
+      order_note: "WhatsApp will open with a ready message you can edit before sending.",
+      notif_perm: "Enable price notifications",
+
+      ticker_oz: "Global oz:",
+      ticker_g24: "24K gram:",
+      ticker_g21: "21K gram:",
+      ticker_g18: "18K gram:",
+      ticker_source: "Live prices",
+      ticker_source_fail: "Live price unavailable — contact us for current rates",
+      ticker_source_multi: "Live prices — multiple sources",
+      hero_eyebrow: "Wholesale supply — Iraq & worldwide",
+      hero_title: "From the jeweler's scale <em>to the world's markets</em>",
+      hero_lead: "Rabah Co. & Office for Gold & Jewelry Trading supplies wholesale gold and jewelry to dealers and jewelry stores, with certified karats, competitive prices, and secure shipping to Iraq and more than twenty countries worldwide.",
+      hero_btn_quote: "Get a quote",
+      hero_btn_products: "Browse products",
+      panel_title: "Certified karats",
+      panel_sub: "Every piece is tested and hallmarked before it reaches you",
+      stat_karats: "Available karats",
+      stat_shipping: "Shipping destinations",
+      stat_shipping_val: "Iraq + 20 countries",
+      stat_type: "Business type",
+      stat_type_val: "Wholesale only",
+      about_eyebrow: "About us",
+      about_title: "A house of expertise in gold",
+      about_p1: "Rabah Co. & Office for Gold & Jewelry Trading is a trusted destination for gold and jewelry traders seeking wholesale supply. We combine traditional craftsmanship with modern precision to deliver certified-karat gold and jewelry to clients in Iraq and beyond, with wholesale pricing based directly on your order volume — no middlemen.",
+      about_p2: "We work exclusively with jewelry stores, distributors, and traders, and we follow every shipment from karat verification until it arrives safely at your door.",
+      num_1: "1", num_2: "2", num_3: "3", num_4: "4",
+      ledger_1_t: "Piece-by-piece karat testing", ledger_1_d: "Precise checks before packing",
+      ledger_2_t: "Weight & hallmark documentation", ledger_2_d: "Clear record for every shipment",
+      ledger_3_t: "Packaging & shipment insurance", ledger_3_d: "Protection suited to the goods",
+      ledger_4_t: "Daily gold price monitoring", ledger_4_d: "Fair, up-to-date pricing",
+      products_eyebrow: "Our products",
+      products_title: "A range that fits your shelves",
+      products_desc: "A complete selection of gold and jewelry, ready for wholesale supply in multiple karats.",
+      prod_1_t: "Gold rings", prod_1_d: "A wide selection of rings in 18K, 21K and 24K — ideal for stores and distributors.",
+      prod_2_t: "Bracelets & chains", prod_2_d: "Gold bracelets and chains in classic and modern designs, ready for immediate supply.",
+      prod_3_t: "Sets & necklaces", prod_3_d: "Complete jewelry sets suited for exhibitions and major occasions.",
+      prod_4_t: "Gold bars", prod_4_d: "Bars with certified weight and karat — suited for traders and investors.",
+      view_gallery: "View Gallery ←",
+      why_eyebrow: "Why Rabah",
+      why_title: "Trust built piece by piece",
+      why_1_t: "Guaranteed purity", why_1_d: "Every piece is tested and hallmarked before shipping, without exception.",
+      why_2_t: "Wholesale pricing", why_2_d: "Direct pricing matched to your order volume — no extra middlemen.",
+      why_3_t: "Secure global shipping", why_3_d: "Delivery to Iraq and worldwide, with full tracking and shipment insurance.",
+      why_4_t: "Inherited expertise", why_4_d: "Generations of jewelers stand behind every piece we supply.",
+      contact_title: "Ready for your wholesale order",
+      contact_desc: "Contact us for updated prices and supply & shipping details to your country, wherever you are.",
+      contact_btn: "Message us on WhatsApp",
+      contact_address: "Turkey, Istanbul, Yenibosna, Kuyumcukent",
+      contact_note: 'Live gold price sources: <a href="https://goldprice.dev" target="_blank" rel="noopener" class="src-link">goldprice.dev</a> · <a href="https://canlipiyasalar.haremaltin.com/" target="_blank" rel="noopener" class="src-link">Harem Altın</a>.',
+            promo_brand: "Rabah Co. & Office for Gold & Jewelry Trading",
+      promo_phone_label: "Call / WhatsApp:",
+      promo_1: "Wholesale gold & jewelry — 18K, 21K, 24K",
+      promo_2: "Secure shipping to Iraq and 20+ countries",
+      promo_3: "Competitive wholesale prices — no middlemen",
+      promo_4: "Karat check and weight documentation on every shipment",
+      footer_brand: "Rabah Co. & Office for Gold & Jewelry Trading",
+      footer_copy: "© All rights reserved — Rabah Co. & Office for Gold & Jewelry Trading"
+    },
+    tr: {
+      page_title: "Rabah Altın ve Mücevher Ticaret Şirketi",
+      brand_name: "Rabah",
+      brand_tag: "Altın ve Mücevher Ticareti",
+      nav_about: "Hakkımızda",
+      nav_products: "Ürünler",
+      nav_why: "Neden Rabah",
+      nav_contact: "İletişim",
+      nav_cta: "WhatsApp",
+      alert_on: "Fiyat uyarısı",
+      alert_off: "Uyarı kapalı",
+      major_alert_on: "±20$ uyarı",
+      major_alert_off: "±20$ kapalı",
+      major_modal_title: "Ons fiyat değişimine dikkat",
+      major_modal_desc: "Altın onsu son okumaya göre 20 dolardan fazla hareket etti.",
+      major_modal_ok: "Tamam",
+      major_modal_mute: "Bu uyarıyı kapat",
+      major_speak_up: "Dikkat. Ons fiyatı yirmi dolardan fazla yükseldi.",
+      major_speak_down: "Dikkat. Ons fiyatı yirmi dolardan fazla düştü.",
+
+            videos_eyebrow: "Ofis videoları",
+      videos_title: "Reklamlar ve çalışmalarımızdan kesitler",
+      videos_desc: "Tanıtım ve ofis reklam videolarını izleyin. Klipleri aşağıda açıklandığı gibi kolayca ekleyin.",
+      videos_tip: "<b>Video nasıl eklenir?</b><br>1) Dosyayı <code>videos/</code> klasörüne <code>1.mp4</code>, <code>2.mp4</code>, <code>3.mp4</code>… olarak koyun (veya webm)<br>2) YouTube için: yalnızca video kimliğini içeren <code>1.youtube.txt</code> oluşturun<br>3) Sayfayı yenileyin — video otomatik görünür.",
+      videos_empty_title: "Henüz video yok",
+      videos_empty_desc: "videos/ klasörüne 1.mp4 veya 1.youtube.txt ekleyip yenileyin",
+      videos_local: "Ofis videosu",
+      videos_yt: "YouTube videosu",
+order_eyebrow: "Toptan sipariş",
+      order_title: "Siparişinizi bir dakikada gönderin",
+      order_desc: "Bilgileri doldurun; WhatsApp hazır mesajla açılır. Ücret yok, kayıt yok.",
+      order_name: "Ad / mağaza adı",
+      order_country: "Ülke",
+      order_category: "Kategori",
+      order_cat_mixed: "Karışık seçki",
+      order_qty: "Yaklaşık miktar",
+      order_qty_ph: "örn. 50 adet veya 1 kg",
+      order_codes: "Ürün kodları (fotoğrafların altında)",
+      order_codes_ph: "örn. R-01, R-03, BR-02",
+      order_notes: "Notlar",
+      order_notes_ph: "Ayar, modeller, sevkiyat zamanı...",
+      order_submit: "WhatsApp ile gönder",
+      order_pdf: "PDF indir",
+      order_note: "WhatsApp, göndermeden önce düzenleyebileceğiniz hazır bir mesajla açılır.",
+      notif_perm: "Fiyat bildirimlerini aç",
+
+      ticker_oz: "Küresel ons:",
+      ticker_g24: "24 ayar gram:",
+      ticker_g21: "21 ayar gram:",
+      ticker_g18: "18 ayar gram:",
+      ticker_source: "Canlı fiyatlar",
+      ticker_source_fail: "Canlı fiyat yüklenemedi — güncel fiyat için bize ulaşın",
+      ticker_source_multi: "Canlı fiyatlar — birden fazla kaynak",
+      hero_eyebrow: "Toptan tedarik — Irak ve tüm dünya",
+      hero_title: "Kuyumcu terazisinden <em>dünya piyasalarına</em>",
+      hero_lead: "Rabah Altın ve Mücevher Ticaret Şirketi, satıcılara ve kuyumcu mağazalarına toptan altın ve mücevher tedarik eder; belgelenmiş ayarlar, rekabetçi fiyatlar ve Irak ile yirmi ülkeden fazlasına güvenli gönderim sunar.",
+      hero_btn_quote: "Teklif alın",
+      hero_btn_products: "Ürünleri inceleyin",
+      panel_title: "Belgelenmiş ayarlar",
+      panel_sub: "Her parça size ulaşmadan önce test edilir ve damgalanır",
+      stat_karats: "Mevcut ayarlar",
+      stat_shipping: "Sevkiyat noktaları",
+      stat_shipping_val: "Irak + 20 ülke",
+      stat_type: "İş tipi",
+      stat_type_val: "Sadece toptan",
+      about_eyebrow: "Hakkımızda",
+      about_title: "Altın dünyasında bir uzmanlık evi",
+      about_p1: "Rabah Altın ve Mücevher Ticaret Şirketi, toptan tedarik arayan altın ve mücevher tüccarları için güvenilir bir adresdir. Geleneksel kuyumculuk ustalığını modern hassasiyetle birleştirerek, Irak ve ötesindeki müşterilerimize belgelenmiş ayarlı altın ve mücevher sunuyoruz; fiyatlar sipariş hacminize göre, aracısız belirlenir.",
+      about_p2: "Yalnızca kuyumcu mağazaları, dağıtıcılar ve tüccarlarla çalışırız; her sevkiyatı ayar kontrolünden kapınıza güvenli teslimata kadar takip ederiz.",
+      num_1: "1", num_2: "2", num_3: "3", num_4: "4",
+      ledger_1_t: "Parça parça ayar kontrolü", ledger_1_d: "Paketlemeden önce hassas denetim",
+      ledger_2_t: "Ağırlık ve damga belgelendirmesi", ledger_2_d: "Her sevkiyat için net kayıt",
+      ledger_3_t: "Paketleme ve sevkiyat sigortası", ledger_3_d: "Ürüne uygun koruma",
+      ledger_4_t: "Günlük altın fiyat takibi", ledger_4_d: "Adil ve güncel fiyatlama",
+      products_eyebrow: "Ürünlerimiz",
+      products_title: "Reyonunuza uygun seçki",
+      products_desc: "Birden fazla ayarda toptan tedarike hazır, kapsamlı altın ve mücevher koleksiyonu.",
+      prod_1_t: "Altın yüzükler", prod_1_d: "18, 21 ve 24 ayar geniş yüzük seçkisi — mağazalar ve dağıtıcılar için ideal.",
+      prod_2_t: "Bilezikler ve zincirler", prod_2_d: "Klasik ve modern tasarımlarda altın bilezik ve zincirler, anında tedarik için hazır.",
+      prod_3_t: "Takımlar ve kolyeler", prod_3_d: "Fuarlar ve büyük etkinlikler için eksiksiz mücevher takımları.",
+      prod_4_t: "Altın külçeler", prod_4_d: "Belgeli ağırlık ve ayarda külçeler — tüccar ve yatırımcılar için uygun.",
+      view_gallery: "Galeriyi Gör ←",
+      why_eyebrow: "Neden Rabah",
+      why_title: "Parça parça inşa edilen güven",
+      why_1_t: "Garanti saflık", why_1_d: "Her parça istisnasız sevkten önce test edilir ve damgalanır.",
+      why_2_t: "Toptan fiyatlar", why_2_d: "Sipariş hacminize uygun, aracısız doğrudan fiyatlama.",
+      why_3_t: "Güvenli küresel sevkiyat", why_3_d: "Irak ve tüm ülkelere teslimat; tam takip ve sevkiyat sigortası.",
+      why_4_t: "Devralınan ustalık", why_4_d: "Nesiller boyu kuyumcular, tedarik ettiğimiz her parçanın arkasındadır.",
+      contact_title: "Toptan siparişiniz için hazırız",
+      contact_desc: "Güncel fiyatlar ve ülkenize tedarik ile sevkiyat detayları için bize ulaşın.",
+      contact_btn: "WhatsApp ile yazın",
+      contact_address: "Türkiye, İstanbul, Yenibosna, Kuyumcukent",
+      contact_note: 'Canlı altın fiyat kaynakları: <a href="https://goldprice.dev" target="_blank" rel="noopener" class="src-link">goldprice.dev</a> · <a href="https://canlipiyasalar.haremaltin.com/" target="_blank" rel="noopener" class="src-link">Harem Altın</a>.',
+            promo_brand: "Rabah Altın ve Mücevher Ticaret Şirketi",
+      promo_phone_label: "İletişim:",
+      promo_1: "Toptan altın ve mücevher — 18, 21, 24 ayar",
+      promo_2: "Irak ve 20+ ülkeye güvenli sevkiyat",
+      promo_3: "Rekabetçi toptan fiyatlar — aracısız",
+      promo_4: "Her sevkiyatta ayar kontrolü ve ağırlık belgesi",
+      footer_brand: "Rabah Altın ve Mücevher Ticaret Şirketi",
+      footer_copy: "© Tüm hakları saklıdır — Rabah Altın ve Mücevher Ticaret Şirketi"
+    }
+  };
+
+  function setLang(lang){
+    const dict = I18N[lang] || I18N.ar;
+    const html = document.documentElement;
+    html.lang = lang;
+    html.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if(dict[key] != null) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if(dict[key] != null) el.innerHTML = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if(dict[key] != null) el.setAttribute('placeholder', dict[key]);
+    });
+    // refresh order select options labels
+    document.querySelectorAll('#oCat option[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if(dict[key] != null) el.textContent = dict[key];
+    });
+
+    const titleEl = document.querySelector('title');
+    if(titleEl && dict.page_title) titleEl.textContent = dict.page_title;
+
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    if(typeof updateAlertToggleUI === 'function') updateAlertToggleUI();
+    if(typeof updateMajorAlertToggleUI === 'function') updateMajorAlertToggleUI();
+
+    try{ localStorage.setItem('rabah_lang', lang); }catch(e){}
+  }
+
+  document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
+  });
+
+  // restore saved language
+  let saved = 'ar';
+  try{ saved = localStorage.getItem('rabah_lang') || 'ar'; }catch(e){}
+  if(saved !== 'ar') setLang(saved);
+
+  // mobile nav
+  document.querySelector('.nav-toggle').addEventListener('click', function(){
+    document.body.classList.toggle('menu-open');
+  });
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  // ---------- live gold prices ----------
+  const usdFmt = new Intl.NumberFormat('en-US', {style:'currency', currency:'USD', maximumFractionDigits:2});
+  const tryFmt = new Intl.NumberFormat('en-US', {style:'currency', currency:'TRY', maximumFractionDigits:2});
+  const OZ_TO_GRAM = 31.1034768;
+  const OZ_ALERT_DELTA = 5; // تنبيه عند ارتفاع أو انخفاض الأونصة 5$ فأكثر
+  let lastOzUsd = null;
+  let alertsEnabled = true;
+  let majorAlertsEnabled = true;
+  const OZ_MAJOR_DELTA = 20; // إطار منبثق + نطق عند ±20$
+  try {
+    const saved = localStorage.getItem('rabah_last_oz');
+    if(saved) lastOzUsd = parseFloat(saved);
+    const a = localStorage.getItem('rabah_alerts');
+    if(a === '0') alertsEnabled = false;
+    const m = localStorage.getItem('rabah_major_alerts');
+    if(m === '0') majorAlertsEnabled = false;
+  } catch(e){}
+
+  let audioCtx = null;
+  function ensureAudio(){
+    if(!audioCtx){
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if(AC) audioCtx = new AC();
+    }
+    if(audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+    return audioCtx;
+  }
+  document.addEventListener('click', () => ensureAudio(), {once:true});
+
+  function playTone(freq, start, dur, type, vol){
+    const ctx = ensureAudio();
+    if(!ctx) return;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type || 'sine';
+    osc.frequency.value = freq;
+    const t0 = ctx.currentTime + start;
+    gain.gain.setValueAtTime(0.0001, t0);
+    gain.gain.exponentialRampToValueAtTime(vol || 0.22, t0 + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t0);
+    osc.stop(t0 + dur + 0.02);
+  }
+
+  // صوت تنبيه أوضح: نبضتان + نغمة
+  function playRiseChime(){
+    playTone(880, 0,    0.14, 'square', 0.14);
+    playTone(1174, 0.16, 0.16, 'square', 0.14);
+    playTone(1396, 0.34, 0.28, 'sine', 0.2);
+  }
+  function playDropChime(){
+    playTone(880, 0,    0.14, 'square', 0.14);
+    playTone(659, 0.16, 0.16, 'square', 0.14);
+    playTone(523, 0.34, 0.28, 'sine', 0.2);
+  }
+
+  function showAlertToast(kind){
+    let el = document.getElementById('priceAlertToast');
+    if(!el){
+      el = document.createElement('div');
+      el.id = 'priceAlertToast';
+      el.style.cssText = 'position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);z-index:200;background:#241C15;border:1px solid #C9A227;color:#F2ECDF;padding:12px 20px;border-radius:4px;font-size:14px;font-weight:700;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none;box-shadow:0 8px 28px rgba(0,0,0,.45);';
+      document.body.appendChild(el);
+    }
+    const lang = document.documentElement.lang || 'ar';
+    const msgs = {
+      ar: {up: '⬆ ارتفاع سعر الأونصة +5$ أو أكثر', down: '⬇ انخفاض سعر الأونصة −5$ أو أكثر'},
+      en: {up: '⬆ Ounce price up $5+', down: '⬇ Ounce price down $5+'},
+      tr: {up: '⬆ Ons fiyatı +5$ yükseldi', down: '⬇ Ons fiyatı −5$ düştü'}
+    };
+    const m = msgs[lang] || msgs.ar;
+    el.textContent = kind === 'up' ? m.up : m.down;
+    el.style.borderColor = kind === 'up' ? '#E8C468' : '#E8A0A8';
+    el.style.opacity = '1';
+    el.style.transform = 'translateX(-50%) translateY(0)';
+    clearTimeout(el._hideTimer);
+    el._hideTimer = setTimeout(() => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateX(-50%) translateY(20px)';
+    }, 3500);
+  }
+
+  function flashTicker(kind){
+    const bar = document.querySelector('.ticker-bar');
+    if(!bar) return;
+    const color = kind === 'up' ? '#E8C468' : '#E8A0A8';
+    bar.style.transition = 'box-shadow .3s ease, filter .3s ease';
+    bar.style.boxShadow = '0 0 0 2px '+color+', 0 0 18px '+color+'88';
+    bar.style.filter = 'brightness(1.12)';
+    setTimeout(() => {
+      bar.style.boxShadow = '';
+      bar.style.filter = '';
+    }, 1600);
+  }
+
+
+  function speakMajorAlert(kind){
+    if(typeof speechSynthesis === 'undefined') return;
+    try { speechSynthesis.cancel(); } catch(e){}
+    const lang = document.documentElement.lang || 'ar';
+    const dict = I18N[lang] || I18N.ar;
+    const phrase = kind === 'up'
+      ? (dict.major_speak_up || dict.major_modal_title)
+      : (dict.major_speak_down || dict.major_modal_title);
+    const u = new SpeechSynthesisUtterance(phrase);
+    u.lang = lang === 'tr' ? 'tr-TR' : (lang === 'en' ? 'en-US' : 'ar-SA');
+    u.rate = 0.95;
+    u.volume = 1;
+    // prefer matching voice if available
+    const voices = speechSynthesis.getVoices() || [];
+    const pref = voices.find(v => v.lang && v.lang.toLowerCase().startsWith(u.lang.slice(0,2)));
+    if(pref) u.voice = pref;
+    speechSynthesis.speak(u);
+  }
+
+  function showMajorOzModal(kind, ozUsd, diff){
+    const backdrop = document.getElementById('ozMajorModal');
+    if(!backdrop) return;
+    const dict = I18N[document.documentElement.lang || 'ar'] || I18N.ar;
+    const title = backdrop.querySelector('[data-i18n="major_modal_title"]');
+    const desc = backdrop.querySelector('[data-i18n="major_modal_desc"]');
+    if(title) title.textContent = dict.major_modal_title || title.textContent;
+    if(desc) desc.textContent = dict.major_modal_desc || desc.textContent;
+    const priceEl = document.getElementById('ozModalPrice');
+    const sign = diff > 0 ? '+' : '';
+    if(priceEl){
+      priceEl.textContent = usdFmt.format(ozUsd) + '  (' + sign + diff.toFixed(2) + ' $)';
+      priceEl.className = 'oz-price ' + (kind === 'up' ? 'up' : 'down');
+    }
+    const icon = document.getElementById('ozModalIcon');
+    if(icon) icon.textContent = kind === 'up' ? '📈' : '📉';
+    openMajorOzModalEl(backdrop);
+    speakMajorAlert(kind);
+  }
+
+  function closeMajorOzModal(){
+    const backdrop = document.getElementById('ozMajorModal');
+    if(backdrop){
+      backdrop.classList.remove('open');
+    }
+    try { if(window.speechSynthesis) speechSynthesis.cancel(); } catch(e){}
+  }
+
+  function openMajorOzModalEl(backdrop){
+    if(!backdrop) return;
+    backdrop.classList.add('open');
+  }
+
+  // تفويض أحداث: يعمل حتى لو كان الإطار بعد السكربت
+  document.addEventListener('click', function(e){
+    const t = e.target;
+    if(!t) return;
+    if(t.id === 'ozModalOk' || (t.closest && t.closest('#ozModalOk'))){
+      e.preventDefault();
+      e.stopPropagation();
+      closeMajorOzModal();
+      return;
+    }
+    if(t.id === 'ozModalMute' || (t.closest && t.closest('#ozModalMute'))){
+      e.preventDefault();
+      majorAlertsEnabled = false;
+      try { localStorage.setItem('rabah_major_alerts', '0'); } catch(err){}
+      if(typeof updateMajorAlertToggleUI === 'function') updateMajorAlertToggleUI();
+      closeMajorOzModal();
+      return;
+    }
+    if(t.id === 'ozMajorModal'){
+      closeMajorOzModal();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeMajorOzModal();
+  });
+
+  function updateMajorAlertToggleUI(){
+    const btn = document.getElementById('majorAlertToggle');
+    if(!btn) return;
+    const dict = I18N[document.documentElement.lang || 'ar'] || I18N.ar;
+    const label = btn.querySelector('span');
+    btn.classList.toggle('on', majorAlertsEnabled);
+    btn.classList.toggle('off', !majorAlertsEnabled);
+    if(label) label.textContent = majorAlertsEnabled
+      ? (dict.major_alert_on || 'تنبيه ±20$')
+      : (dict.major_alert_off || '±20$ متوقف');
+  }
+
+  document.getElementById('majorAlertToggle')?.addEventListener('click', function(){
+    majorAlertsEnabled = !majorAlertsEnabled;
+    try { localStorage.setItem('rabah_major_alerts', majorAlertsEnabled ? '1' : '0'); } catch(e){}
+    updateMajorAlertToggleUI();
+    ensureAudio();
+    if(majorAlertsEnabled){
+      // short confirm + request voices
+      playRiseChime();
+      if(typeof speechSynthesis !== 'undefined') speechSynthesis.getVoices();
+    }
+  });
+
+  updateMajorAlertToggleUI();
+  if(typeof speechSynthesis !== 'undefined'){
+    speechSynthesis.getVoices();
+    speechSynthesis.onvoiceschanged = function(){ speechSynthesis.getVoices(); };
+  }
+
+
+    function updateAlertToggleUI(){
+    const btn = document.getElementById('alertToggle');
+    if(!btn) return;
+    const lang = document.documentElement.lang || 'ar';
+    const dict = I18N[lang] || I18N.ar;
+    const label = btn.querySelector('[data-i18n]') || btn.querySelector('span');
+    btn.classList.toggle('on', alertsEnabled);
+    btn.classList.toggle('off', !alertsEnabled);
+    if(label) label.textContent = alertsEnabled ? (dict.alert_on || 'تنبيه السعر') : (dict.alert_off || 'التنبيه متوقف');
+  }
+
+  const alertBtn = document.getElementById('alertToggle');
+  if(alertBtn){
+    alertBtn.addEventListener('click', () => {
+      alertsEnabled = !alertsEnabled;
+      try { localStorage.setItem('rabah_alerts', alertsEnabled ? '1' : '0'); } catch(e){}
+      updateAlertToggleUI();
+      ensureAudio();
+      // نغمة قصيرة للتأكيد عند التفعيل
+      if(alertsEnabled) playRiseChime();
+    });
+  }
+  updateAlertToggleUI();
+
+  function setValues(selector, text){
+    document.querySelectorAll(selector).forEach(el => el.textContent = text);
+  }
+
+  function applyPrices(ozUsd, g24Try, g21Try, g18Try, g14Try, sourceKey){
+    if(lastOzUsd != null && !isNaN(lastOzUsd)){
+      const diff = ozUsd - lastOzUsd;
+      // تنبيه كبير ±20$ : إطار منبثق + نطق
+      if(majorAlertsEnabled && (diff >= OZ_MAJOR_DELTA || diff <= -OZ_MAJOR_DELTA)){
+        showMajorOzModal(diff > 0 ? 'up' : 'down', ozUsd, diff);
+      }
+      // تنبيه عادي ±5$
+      if(alertsEnabled){
+        if(diff >= OZ_ALERT_DELTA){
+          playRiseChime();
+          flashTicker('up');
+          showAlertToast('up');
+          sendBrowserNotif('up', ozUsd);
+        } else if(diff <= -OZ_ALERT_DELTA){
+          playDropChime();
+          flashTicker('down');
+          showAlertToast('down');
+          sendBrowserNotif('down', ozUsd);
+        }
+      }
+    }
+    lastOzUsd = ozUsd;
+    try { localStorage.setItem('rabah_last_oz', String(ozUsd)); } catch(e){}
+
+    setValues('.v-oz-usd', usdFmt.format(ozUsd));
+    setValues('.v-g24-try', tryFmt.format(g24Try));
+    setValues('.v-g21-try', tryFmt.format(g21Try));
+    setValues('.v-g18-try', tryFmt.format(g18Try));
+    if(g14Try != null && !isNaN(g14Try)) setValues('.v-g14-try', tryFmt.format(g14Try));
+    window.__goldGram24Try = g24Try;
+    if(typeof runConverter === 'function') runConverter();
+    const lang = document.documentElement.lang || 'ar';
+    const dict = I18N[lang] || I18N.ar;
+    if(sourceKey && dict[sourceKey]) setValues('.v-source', dict[sourceKey]);
+  }
+
+  async function loadFromGoldpriceDev(){
+    const [ozRes, caratRes] = await Promise.all([
+      fetch('https://api.goldprice.dev/v1/convert?from=XAU&to=USD&unit=oz'),
+      fetch('https://api.goldprice.dev/v1/carat?currency=TRY')
+    ]);
+    if(!ozRes.ok || !caratRes.ok) throw new Error('goldprice.dev bad response');
+    const ozData = await ozRes.json();
+    const caratData = await caratRes.json();
+    if(!ozData.result || !caratData.price_gram_24k) throw new Error('goldprice.dev missing data');
+    applyPrices(
+      parseFloat(ozData.result),
+      parseFloat(caratData.price_gram_24k),
+      parseFloat(caratData.price_gram_21k),
+      parseFloat(caratData.price_gram_18k),
+      parseFloat(caratData.price_gram_24k) * (14/24),
+      'ticker_source'
+    );
+  }
+
+  async function loadFromFallback(){
+    const [goldRes, fxRes] = await Promise.all([
+      fetch('https://api.gold-api.com/price/XAU'),
+      fetch('https://open.er-api.com/v6/latest/USD')
+    ]);
+    if(!goldRes.ok || !fxRes.ok) throw new Error('fallback bad response');
+    const goldData = await goldRes.json();
+    const fxData = await fxRes.json();
+    const ozUsd = parseFloat(goldData.price);
+    const usdTry = parseFloat(fxData.rates && fxData.rates.TRY);
+    if(!ozUsd || !usdTry) throw new Error('fallback missing data');
+    const g24 = (ozUsd / OZ_TO_GRAM) * usdTry;
+    applyPrices(ozUsd, g24, g24 * (21/24), g24 * (18/24), g24 * (14/24), 'ticker_source_multi');
+  }
+
+  async function loadGoldPrices(){
+    try{
+      await loadFromGoldpriceDev();
+    }catch(e1){
+      try{
+        await loadFromFallback();
+      }catch(e2){
+        const lang = document.documentElement.lang || 'ar';
+        const dict = I18N[lang] || I18N.ar;
+        setValues('.v-source', dict.ticker_source_fail || '—');
+      }
+    }
+  }
+
+
+  // ---------- Browser notifications for price moves ----------
+  function sendBrowserNotif(kind, ozUsd){
+    if(!alertsEnabled) return;
+    if(typeof Notification === 'undefined') return;
+    if(Notification.permission !== 'granted') return;
+    const lang = document.documentElement.lang || 'ar';
+    const titles = {
+      ar: {up: 'ارتفاع سعر الأونصة', down: 'انخفاض سعر الأونصة'},
+      en: {up: 'Gold ounce up', down: 'Gold ounce down'},
+      tr: {up: 'Ons yükseldi', down: 'Ons düştü'}
+    };
+    const t = (titles[lang] || titles.ar)[kind];
+    const body = (kind === 'up' ? '▲ ' : '▼ ') + usdFmt.format(ozUsd);
+    try {
+      const n = new Notification(t, { body: body, tag: 'rabah-gold-oz', renotify: true });
+      setTimeout(() => n.close(), 8000);
+    } catch(e){}
+  }
+
+  (function hookNotifPermission(){
+    const btn = document.getElementById('alertToggle');
+    if(!btn) return;
+    btn.addEventListener('click', () => {
+      if(alertsEnabled && typeof Notification !== 'undefined' && Notification.permission === 'default'){
+        Notification.requestPermission();
+      }
+    });
+  })();
+
+  // ---------- Wholesale order form → WhatsApp ----------
+  function collectOrderFields(){
+    const name = (document.getElementById('oName').value || '').trim();
+    const country = (document.getElementById('oCountry').value || '').trim();
+    const catSel = document.getElementById('oCat');
+    const cat = catSel ? catSel.options[catSel.selectedIndex].text : '';
+    const qty = (document.getElementById('oQty').value || '').trim();
+    const codes = (document.getElementById('oCodes') && document.getElementById('oCodes').value || '').trim();
+    const notes = (document.getElementById('oNotes').value || '').trim();
+    return {name, country, cat, qty, codes, notes};
+  }
+
+  function buildInvoiceMeta(){
+    const lang = document.documentElement.lang || 'ar';
+    const now = new Date();
+    const dateStr = now.toLocaleString(lang === 'tr' ? 'tr-TR' : (lang === 'en' ? 'en-GB' : 'ar-IQ'), {
+      year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit'
+    });
+    const invNo = 'INV-' + now.getFullYear() + String(now.getMonth()+1).padStart(2,'0') + String(now.getDate()).padStart(2,'0') + '-' + String(now.getHours()).padStart(2,'0') + String(now.getMinutes()).padStart(2,'0');
+    return {lang, dateStr, invNo};
+  }
+
+  function buildInvoiceLines(f, meta){
+    const {lang, dateStr, invNo} = meta;
+    if(lang === 'en'){
+      return [
+        '════════════════════════════════',
+        '   RABAH JEWELRY — WHOLESALE',
+        '   Official order / invoice request',
+        '════════════════════════════════',
+        'Invoice No: ' + invNo,
+        'Date: ' + dateStr,
+        '────────────────────────────────',
+        'CUSTOMER',
+        'Name / Shop: ' + f.name,
+        'Country: ' + f.country,
+        '────────────────────────────────',
+        'ORDER DETAILS',
+        'Category: ' + f.cat,
+        'Product codes: ' + (f.codes || '—'),
+        'Approx. qty: ' + (f.qty || '—'),
+        'Notes: ' + (f.notes || '—'),
+        '────────────────────────────────',
+        'Office: +90 536 618 43 81',
+        'Email: alrabahrabah5@gmail.com',
+        '════════════════════════════════',
+        'Please confirm availability and final wholesale price.'
+      ];
+    }
+    if(lang === 'tr'){
+      return [
+        '════════════════════════════════',
+        '   RABAH KUYUMCULUK — TOPTAN',
+        '   Resmi sipariş / fatura talebi',
+        '════════════════════════════════',
+        'Fatura No: ' + invNo,
+        'Tarih: ' + dateStr,
+        '────────────────────────────────',
+        'MÜŞTERİ',
+        'Ad / Mağaza: ' + f.name,
+        'Ülke: ' + f.country,
+        '────────────────────────────────',
+        'SİPARİŞ DETAYI',
+        'Kategori: ' + f.cat,
+        'Ürün kodları: ' + (f.codes || '—'),
+        'Yaklaşık miktar: ' + (f.qty || '—'),
+        'Notlar: ' + (f.notes || '—'),
+        '────────────────────────────────',
+        'Ofis: +90 536 618 43 81',
+        'E-posta: alrabahrabah5@gmail.com',
+        '════════════════════════════════',
+        'Lütfen stok ve nihai toptan fiyatı teyit edin.'
+      ];
+    }
+    return [
+      '════════════════════════════════',
+      '   شركة ومكتب رباح لتجارة الذهب والمجوهرات — جملة',
+      '   طلب / فاتورة مبدئية',
+      '════════════════════════════════',
+      'رقم الطلب: ' + invNo,
+      'التاريخ: ' + dateStr,
+      '────────────────────────────────',
+      'بيانات العميل',
+      'الاسم / المحل: ' + f.name,
+      'الدولة: ' + f.country,
+      '────────────────────────────────',
+      'تفاصيل الطلب',
+      'الفئة: ' + f.cat,
+      'أرقام المنتجات: ' + (f.codes || '—'),
+      'الكمية التقريبية: ' + (f.qty || '—'),
+      'ملاحظات: ' + (f.notes || '—'),
+      '────────────────────────────────',
+      'المكتب: +90 536 618 43 81',
+      'البريد: alrabahrabah5@gmail.com',
+      '════════════════════════════════',
+      'يرجى تأكيد التوفر والسعر النهائي للجملة.'
+    ];
+  }
+
+  function buildInvoiceHTML(f, meta){
+    const {lang, dateStr, invNo} = meta;
+    const dir = lang === 'ar' ? 'rtl' : 'ltr';
+    const L = lang === 'en' ? {
+      title:'RABAH JEWELRY', sub:'Wholesale order / proforma invoice',
+      inv:'Invoice No', date:'Date', customer:'Customer', name:'Name / Shop', country:'Country',
+      details:'Order details', cat:'Category', codes:'Product codes', qty:'Approx. qty', notes:'Notes',
+      office:'Office', email:'Email', foot:'Please confirm availability and final wholesale price.'
+    } : lang === 'tr' ? {
+      title:'RABAH KUYUMCULUK', sub:'Toptan sipariş / proforma fatura',
+      inv:'Fatura No', date:'Tarih', customer:'Müşteri', name:'Ad / Mağaza', country:'Ülke',
+      details:'Sipariş detayı', cat:'Kategori', codes:'Ürün kodları', qty:'Yaklaşık miktar', notes:'Notlar',
+      office:'Ofis', email:'E-posta', foot:'Lütfen stok ve nihai toptan fiyatı teyit edin.'
+    } : {
+      title:'شركة ومكتب رباح لتجارة الذهب والمجوهرات', sub:'طلب جملة / فاتورة مبدئية',
+      inv:'رقم الطلب', date:'التاريخ', customer:'بيانات العميل', name:'الاسم / المحل', country:'الدولة',
+      details:'تفاصيل الطلب', cat:'الفئة', codes:'أرقام المنتجات', qty:'الكمية التقريبية', notes:'ملاحظات',
+      office:'المكتب', email:'البريد', foot:'يرجى تأكيد التوفر والسعر النهائي للجملة.'
+    };
+    function row(k,v){ return '<tr><td style="padding:8px 10px;border:1px solid #ddd;color:#555;width:38%">'+k+'</td><td style="padding:8px 10px;border:1px solid #ddd;font-weight:600">'+ (v||'—') +'</td></tr>'; }
+    return '<div style="direction:'+dir+';max-width:720px;margin:0 auto;color:#111;font-family:Arial,Tahoma,sans-serif">'
+      + '<div style="text-align:center;border-bottom:3px solid #C9A227;padding-bottom:14px;margin-bottom:18px">'
+      + '<div style="font-size:22px;font-weight:800;color:#8C7534">'+L.title+'</div>'
+      + '<div style="font-size:13px;color:#666;margin-top:4px">'+L.sub+'</div></div>'
+      + '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:14px">'
+      + row(L.inv, invNo) + row(L.date, dateStr)
+      + '</table>'
+      + '<div style="font-size:14px;font-weight:800;color:#C9A227;margin:12px 0 6px">'+L.customer+'</div>'
+      + '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:14px">'
+      + row(L.name, f.name) + row(L.country, f.country)
+      + '</table>'
+      + '<div style="font-size:14px;font-weight:800;color:#C9A227;margin:12px 0 6px">'+L.details+'</div>'
+      + '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:14px">'
+      + row(L.cat, f.cat) + row(L.codes, f.codes) + row(L.qty, f.qty) + row(L.notes, f.notes)
+      + '</table>'
+      + '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:18px">'
+      + row(L.office, '+90 536 618 43 81') + row(L.email, 'alrabahrabah5@gmail.com')
+      + '</table>'
+      + '<p style="font-size:12px;color:#666;text-align:center;border-top:1px solid #ddd;padding-top:12px">'+L.foot+'</p>'
+      + '</div>';
+  }
+
+  function exportOrderPdf(){
+    const f = collectOrderFields();
+    if(!f.name || !f.country){
+      const lang = document.documentElement.lang || 'ar';
+      alert(lang==='en' ? 'Please fill name and country first.' : lang==='tr' ? 'Lütfen ad ve ülke alanlarını doldurun.' : 'يرجى تعبئة الاسم والدولة أولاً.');
+      return;
+    }
+    const meta = buildInvoiceMeta();
+    const area = document.getElementById('invoicePrintArea');
+    if(!area) return;
+    area.innerHTML = buildInvoiceHTML(f, meta);
+    area.style.display = 'block';
+    const finish = () => { area.style.display = 'none'; area.innerHTML = ''; };
+    // محاولة حفظ PDF عبر html2pdf إن وُجدت المكتبة، وإلا نافذة الطباعة (حفظ كـ PDF)
+    if(window.html2pdf){
+      html2pdf().set({
+        margin: 10,
+        filename: meta.invNo + '.pdf',
+        image: {type:'jpeg', quality:0.98},
+        html2canvas: {scale:2, useCORS:true},
+        jsPDF: {unit:'mm', format:'a4', orientation:'portrait'}
+      }).from(area).save().then(finish).catch(() => { window.print(); finish(); });
+    } else {
+      window.print();
+      setTimeout(finish, 500);
+    }
+  }
+
+  const orderForm = document.getElementById('orderForm');
+  if(orderForm){
+    orderForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const f = collectOrderFields();
+      if(!f.name || !f.country) return;
+      const meta = buildInvoiceMeta();
+      const lines = buildInvoiceLines(f, meta);
+      const msg = encodeURIComponent(lines.join('\\n'));
+      window.open('https://wa.me/905366184381?text='+msg, '_blank', 'noopener');
+    });
+  }
+  const pdfBtn = document.getElementById('orderPdfBtn');
+  if(pdfBtn) pdfBtn.addEventListener('click', exportOrderPdf);
+
+
+  // ---------- Analytics ----------
+  // Plausible: ضع نطاقك بعد التسجيل في plausible.io
+  const PLAUSIBLE_DOMAIN = ''; // مثال: 'your-domain.com'
+  // Google Analytics 4
+  const GA_MEASUREMENT_ID = ''; // مثال: 'G-XXXXXXXXXX'
+
+  if(PLAUSIBLE_DOMAIN){
+    const s = document.createElement('script');
+    s.defer = true;
+    s.dataset.domain = PLAUSIBLE_DOMAIN;
+    s.src = 'https://plausible.io/js/script.js';
+    document.head.appendChild(s);
+  }
+  if(GA_MEASUREMENT_ID){
+    const s1 = document.createElement('script');
+    s1.async = true;
+    s1.src = 'https://www.googletagmanager.com/gtag/js?id='+GA_MEASUREMENT_ID;
+    document.head.appendChild(s1);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID);
+  }
+
+
+
+  // ---------- Office videos gallery ----------
+  // أضف أرقام فيديوهات يوتيوب هنا (اختياري):
+  // من الرابط: youtube.com/watch?v=XXXXXXXX → انسخ XXXXXXXX
+  const YOUTUBE_IDS = [
+    // 'XXXXXXXX',
+  ];
+
+  (async function loadVideos(){
+    const grid = document.getElementById('videosGrid');
+    if(!grid) return;
+    const folder = 'videos/';
+    const max = 30;
+    const localExts = ['mp4','webm','MP4','WEBM'];
+    const found = [];
+
+    function tv(key){
+      const lang = document.documentElement.lang || 'ar';
+      return (I18N[lang] || I18N.ar)[key] || key;
+    }
+
+    function probeFile(url){
+      return new Promise(resolve => {
+        const v = document.createElement('video');
+        v.preload = 'metadata';
+        let settled = false;
+        const done = (ok) => {
+          if(settled) return;
+          settled = true;
+          v.removeAttribute('src');
+          v.load();
+          resolve(ok);
+        };
+        v.onloadedmetadata = () => done(true);
+        v.onerror = () => done(false);
+        v.src = url;
+        setTimeout(() => done(false), 1200);
+      });
+    }
+
+    // YouTube first (from list)
+    (YOUTUBE_IDS || []).forEach(id => {
+      id = String(id || '').trim();
+      if(id) found.push({type:'yt', id});
+    });
+
+    // Local numbered files
+    for(let n = 1; n <= max; n++){
+      let hit = null;
+      for(const ext of localExts){
+        const url = folder + n + '.' + ext;
+        if(await probeFile(url)){ hit = {type:'file', src:url}; break; }
+      }
+      if(hit) found.push(hit);
+      else if(n > 3 && !found.some(f => f.type === 'file')) break;
+      else if(n > 3){
+        // allow gaps of 1 then stop for local sequence
+        const localCount = found.filter(f => f.type === 'file').length;
+        if(localCount > 0 && n > localCount + 2) break;
+      }
+    }
+
+    grid.innerHTML = '';
+    if(found.length === 0){
+      grid.innerHTML = '<div class="videos-empty"><strong>'+tv('videos_empty_title')+'</strong><span>'+tv('videos_empty_desc')+'</span></div>';
+      return;
+    }
+    found.forEach((item, i) => {
+      const card = document.createElement('div');
+      card.className = 'video-card reveal is-visible';
+      const frame = document.createElement('div');
+      frame.className = 'video-frame';
+      if(item.type === 'yt'){
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/'+encodeURIComponent(item.id);
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.loading = 'lazy';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.title = 'YouTube';
+        frame.appendChild(iframe);
+      } else {
+        const video = document.createElement('video');
+        video.src = item.src;
+        video.controls = true;
+        video.playsInline = true;
+        video.preload = 'metadata';
+        frame.appendChild(video);
+      }
+      const lab = document.createElement('div');
+      lab.className = 'v-label';
+      lab.textContent = (item.type === 'yt' ? tv('videos_yt') : tv('videos_local')) + ' #' + (i+1);
+      card.appendChild(frame);
+      card.appendChild(lab);
+      grid.appendChild(card);
+    });
+  })();
+
+
+  // ---------- Karat converter ----------
+  function runConverter(){
+    const w = parseFloat(document.getElementById('convWeight')?.value);
+    const from = parseFloat(document.getElementById('convFrom')?.value);
+    const to = parseFloat(document.getElementById('convTo')?.value);
+    if(!w || !from || !to || w <= 0){
+      ['convPure','convOut','convTry'].forEach(id => { const el=document.getElementById(id); if(el) el.textContent='—'; });
+      return;
+    }
+    const pure = w * (from / 24);
+    const out = pure * (24 / to);
+    const g24 = window.__goldGram24Try;
+    const tryVal = (g24 && isFinite(g24)) ? pure * g24 : null;
+    const fmt = (n) => (Math.round(n * 1000) / 1000).toLocaleString('en-US', {maximumFractionDigits: 3});
+    const elP = document.getElementById('convPure');
+    const elO = document.getElementById('convOut');
+    const elT = document.getElementById('convTry');
+    if(elP) elP.textContent = fmt(pure) + ' g';
+    if(elO) elO.textContent = fmt(out) + ' g';
+    if(elT) elT.textContent = tryVal != null ? tryFmt.format(tryVal) : '—';
+  }
+  ['convWeight','convFrom','convTo'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.addEventListener('input', runConverter);
+    if(el) el.addEventListener('change', runConverter);
+  });
+  runConverter();
+
+  // ---------- Reviews form ----------
+  (function(){
+    const pick = document.getElementById('starPick');
+    const hidden = document.getElementById('revStars');
+    if(pick && hidden){
+      const paint = (n) => {
+        pick.querySelectorAll('button').forEach(b => {
+          b.classList.toggle('on', parseInt(b.getAttribute('data-s'),10) <= n);
+        });
+        hidden.value = String(n);
+      };
+      paint(5);
+      pick.querySelectorAll('button').forEach(b => {
+        b.addEventListener('click', () => paint(parseInt(b.getAttribute('data-s'),10)));
+      });
+    }
+    const form = document.getElementById('reviewForm');
+    if(form){
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = (document.getElementById('revName').value||'').trim();
+        const city = (document.getElementById('revCity').value||'').trim();
+        const stars = document.getElementById('revStars').value || '5';
+        const msgText = (document.getElementById('revText').value||'').trim();
+        const starsStr = '★'.repeat(+stars) + '☆'.repeat(5-+stars);
+        const body = 'تقييم عميل — شركة ومكتب رباح لتجارة الذهب والمجوهرات%0A%0A'
+          + 'الاسم: '+encodeURIComponent(name)+'%0A'
+          + 'المدينة: '+encodeURIComponent(city||'-')+'%0A'
+          + 'التقييم: '+encodeURIComponent(starsStr)+'%0A'
+          + 'الرأي: '+encodeURIComponent(msgText);
+        window.open('https://wa.me/905366184381?text='+body, '_blank', 'noopener');
+      });
+    }
+  })();
+
+  // ---------- Shop mode pills → order type ----------
+  document.querySelectorAll('#shopModePills button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#shopModePills button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const mode = btn.getAttribute('data-mode');
+      const oType = document.getElementById('oType');
+      if(oType) oType.value = mode;
+      if(mode === 'retail'){
+        const o = document.getElementById('order');
+        if(o) o.scrollIntoView({behavior:'smooth'});
+      }
+    });
+  });
+  const goRetail = document.getElementById('goRetailOrder');
+  if(goRetail){
+    goRetail.addEventListener('click', (e) => {
+      const oType = document.getElementById('oType');
+      if(oType) oType.value = 'retail';
+    });
+  }
+
+  // Patch order WhatsApp message to include order type if handler exists later
+  window.__orderTypeLabel = function(){
+    const oType = document.getElementById('oType');
+    if(!oType) return '';
+    return oType.options[oType.selectedIndex].text;
+  };
+
+
+  loadGoldPrices();
+  setInterval(loadGoldPrices, 60000);
+</script>
+
+
+<a href="https://wa.me/905366184381" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 004.1 17.7L3 21l3.4-1.1A11 11 0 1020.5 3.5zM12 20a9 9 0 01-4.6-1.3l-.3-.2-2.7.9.9-2.6-.2-.3A9 9 0 1112 20zm5-6.7c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 01-2.2-1.4 8.2 8.2 0 01-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.3-.4c.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.2.2 2.1 3.2 5.1 4.5l1.7.6c.7.3 1.4.2 1.9.1.6-.1 1.6-.7 1.8-1.3s.2-1.2.2-1.3-.2-.2-.5-.3z"/></svg>
+</a>
+
+
+<div class="oz-modal-backdrop" id="ozMajorModal" role="dialog" aria-modal="true">
+  <div class="oz-modal">
+    <div class="oz-icon" id="ozModalIcon">⚠️</div>
+    <h3 data-i18n="major_modal_title">انتبه لتغيّر سعر الأونصة</h3>
+    <p data-i18n="major_modal_desc">تحرّك سعر الأونصة أكثر من 20 دولاراً مقارنة بآخر قراءة.</p>
+    <div class="oz-price" id="ozModalPrice">—</div>
+    <div class="oz-actions">
+      <button type="button" class="primary" id="ozModalOk" data-i18n="major_modal_ok" onclick="closeMajorOzModal()">حسناً</button>
+      <button type="button" id="ozModalMute" data-i18n="major_modal_mute">إيقاف هذا التنبيه</button>
+    </div>
+  </div>
+</div>
+
+<div id="invoicePrintArea" aria-hidden="true"></div>
+</body>
+</html>
